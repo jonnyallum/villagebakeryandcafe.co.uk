@@ -1,0 +1,68 @@
+/* Hero Section Mobile Optimization */
+
+/* Ensure hero section scales properly on all devices */
+section.relative {
+  min-height: 320px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  /* Adjust hero height for tablets */
+  section.relative.h-80,
+  section.relative[class*="h-80"] {
+    height: 280px !important;
+    min-height: 280px;
+  }
+  
+  /* Ensure image covers properly on mobile */
+  section.relative img {
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Optimize overlay content spacing */
+  section.relative .absolute {
+    padding: 12px !important;
+  }
+  
+  /* Make social icons and buttons more touch-friendly */
+  section.relative a,
+  section.relative button {
+    min-height: 44px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Further reduce height on small phones */
+  section.relative.h-80,
+  section.relative[class*="h-80"] {
+    height: 240px !important;
+    min-height: 240px;
+  }
+  
+  /* Ensure text is readable */
+  section.relative p,
+  section.relative a {
+    font-size: 13px !important;
+  }
+  
+  /* Stack social icons if needed */
+  section.relative .flex.gap-3 {
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Optimize for very small screens */
+  section.relative.h-80,
+  section.relative[class*="h-80"] {
+    height: 220px !important;
+    min-height: 220px;
+  }
+  
+  /* Reduce padding on very small screens */
+  section.relative .absolute {
+    padding: 8px !important;
+  }
+}
