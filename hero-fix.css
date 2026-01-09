@@ -1,35 +1,47 @@
 /* Hero Section Mobile Optimization */
 
-/* Ensure hero section scales properly on all devices */
-section.relative {
-  min-height: 320px;
-}
-
-/* Mobile responsive adjustments */
+/* Target the social media and order buttons specifically */
 @media (max-width: 768px) {
   /* Adjust hero height for tablets */
   section.relative.h-80,
   section.relative[class*="h-80"] {
-    height: 280px !important;
-    min-height: 280px;
+    height: 300px !important;
+    min-height: 300px;
   }
   
-  /* Ensure image covers properly on mobile */
-  section.relative img {
-    object-fit: cover;
-    object-position: center;
+  /* Reduce ALL link sizes in the hero overlay */
+  section.relative .absolute a {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    padding: 6px !important;
   }
   
-  /* Optimize overlay content spacing */
-  section.relative .absolute {
-    padding: 12px !important;
+  /* Reduce icon/svg sizes inside links */
+  section.relative .absolute a > * {
+    width: 24px !important;
+    height: 24px !important;
+    max-width: 24px !important;
+    max-height: 24px !important;
   }
   
-  /* Make social icons and buttons more touch-friendly */
-  section.relative a,
-  section.relative button {
-    min-height: 44px;
-    padding: 10px 16px;
+  /* Reduce text sizes */
+  section.relative .absolute p {
+    font-size: 12px !important;
+  }
+  
+  /* Reduce gaps */
+  section.relative .absolute .flex {
+    gap: 8px !important;
+  }
+  
+  /* Special handling for the Uber Eats button (it has text) */
+  section.relative .absolute a.bg-primary,
+  section.relative .absolute a[class*="bg-"] {
+    width: auto !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -37,19 +49,43 @@ section.relative {
   /* Further reduce height on small phones */
   section.relative.h-80,
   section.relative[class*="h-80"] {
-    height: 240px !important;
-    min-height: 240px;
+    height: 260px !important;
+    min-height: 260px;
   }
   
-  /* Ensure text is readable */
-  section.relative p,
-  section.relative a {
-    font-size: 13px !important;
+  /* Even smaller links */
+  section.relative .absolute a {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    padding: 5px !important;
   }
   
-  /* Stack social icons if needed */
-  section.relative .flex.gap-3 {
-    gap: 8px !important;
+  /* Smaller icons */
+  section.relative .absolute a > * {
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+  }
+  
+  /* Smaller text */
+  section.relative .absolute p {
+    font-size: 11px !important;
+  }
+  
+  /* Reduce gaps further */
+  section.relative .absolute .flex {
+    gap: 6px !important;
+  }
+  
+  /* Uber Eats button */
+  section.relative .absolute a.bg-primary,
+  section.relative .absolute a[class*="bg-"] {
+    width: auto !important;
+    padding: 5px 10px !important;
+    font-size: 11px !important;
   }
 }
 
@@ -57,12 +93,42 @@ section.relative {
   /* Optimize for very small screens */
   section.relative.h-80,
   section.relative[class*="h-80"] {
-    height: 220px !important;
-    min-height: 220px;
+    height: 240px !important;
+    min-height: 240px;
   }
   
-  /* Reduce padding on very small screens */
+  /* Minimal link size */
+  section.relative .absolute a {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    padding: 4px !important;
+  }
+  
+  /* Very small icons */
+  section.relative .absolute a > * {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+  }
+  
+  /* Reduce padding */
   section.relative .absolute {
-    padding: 8px !important;
+    padding: 6px !important;
+  }
+  
+  /* Compact Uber Eats button */
+  section.relative .absolute a.bg-primary,
+  section.relative .absolute a[class*="bg-"] {
+    width: auto !important;
+    padding: 4px 8px !important;
+    font-size: 10px !important;
+  }
+  
+  /* Hide "Order Online" text on very small screens */
+  section.relative .absolute p:contains("Order Online") {
+    display: none !important;
   }
 }
