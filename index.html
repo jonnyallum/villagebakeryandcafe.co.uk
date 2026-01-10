@@ -16,6 +16,48 @@
     <script type="module" crossorigin src="/assets/index-D7opgbht.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DPGSaeli.css">
     <link rel="stylesheet" href="/hero-fix.css">
+    <style>
+      /* MOBILE BUTTON FIX - Inline for maximum priority */
+      @media (max-width: 768px) {
+        section.relative .absolute a[href*="facebook"],
+        section.relative .absolute a[href*="tiktok"],
+        section.relative .absolute a[href*="instagram"],
+        section.relative .absolute a[class*="hover:scale"] {
+          width: 40px !important;
+          height: 40px !important;
+          min-width: 40px !important;
+          min-height: 40px !important;
+          max-width: 40px !important;
+          max-height: 40px !important;
+        }
+      }
+      @media (max-width: 640px) {
+        section.relative .absolute a[href*="facebook"],
+        section.relative .absolute a[href*="tiktok"],
+        section.relative .absolute a[href*="instagram"],
+        section.relative .absolute a[class*="hover:scale"] {
+          width: 36px !important;
+          height: 36px !important;
+          min-width: 36px !important;
+          min-height: 36px !important;
+          max-width: 36px !important;
+          max-height: 36px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        section.relative .absolute a[href*="facebook"],
+        section.relative .absolute a[href*="tiktok"],
+        section.relative .absolute a[href*="instagram"],
+        section.relative .absolute a[class*="hover:scale"] {
+          width: 32px !important;
+          height: 32px !important;
+          min-width: 32px !important;
+          min-height: 32px !important;
+          max-width: 32px !important;
+          max-height: 32px !important;
+        }
+      }
+    </style>
     <script src="/buffets-nav.js" defer></script>
     <script src="/opening-times.js" defer></script>
   </head>

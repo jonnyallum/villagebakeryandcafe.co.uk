@@ -28,7 +28,7 @@
             return;
         }
         
-        // Create the opening times element
+        // Create the opening times element with each day separate
         const openingTimesHTML = `
             <div class="opening-times-section" style="
                 background: linear-gradient(135deg, rgba(156, 168, 62, 0.1) 0%, rgba(156, 168, 62, 0.05) 100%);
@@ -53,11 +53,27 @@
                     line-height: 1.6;
                 ">
                     <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(156, 168, 62, 0.2);">
-                        <span style="font-weight: 600;">Monday - Thursday</span>
+                        <span style="font-weight: 600;">Monday</span>
                         <span>7:30am - 2:00pm</span>
                     </div>
                     <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(156, 168, 62, 0.2);">
-                        <span style="font-weight: 600;">Friday - Saturday</span>
+                        <span style="font-weight: 600;">Tuesday</span>
+                        <span>7:30am - 2:00pm</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(156, 168, 62, 0.2);">
+                        <span style="font-weight: 600;">Wednesday</span>
+                        <span>7:30am - 2:00pm</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(156, 168, 62, 0.2);">
+                        <span style="font-weight: 600;">Thursday</span>
+                        <span>7:30am - 2:00pm</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(156, 168, 62, 0.2);">
+                        <span style="font-weight: 600;">Friday</span>
+                        <span>7:00am - 2:00pm</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(156, 168, 62, 0.2);">
+                        <span style="font-weight: 600;">Saturday</span>
                         <span>7:00am - 2:00pm</span>
                     </div>
                     <div style="display: flex; justify-content: space-between; padding: 8px 0;">
