@@ -6,7 +6,7 @@
   section.relative .absolute a[href*="facebook"],
   section.relative .absolute a[href*="tiktok"],
   section.relative .absolute a[href*="instagram"],
-  section.relative .absolute a[class*="hover:scale"] {
+  section.relative .absolute a[class*="hover:scale"]:not([href*="just-eat"]):not([href*="ubereats"]) {
     width: 32px !important;
     height: 32px !important;
     min-width: 32px !important;
@@ -22,20 +22,29 @@
   section.relative .absolute a[href*="facebook"] svg,
   section.relative .absolute a[href*="tiktok"] svg,
   section.relative .absolute a[href*="instagram"] svg,
-  section.relative .absolute a[class*="hover:scale"] svg {
+  section.relative .absolute a[class*="hover:scale"]:not([href*="just-eat"]):not([href*="ubereats"]) svg {
     width: 20px !important;
     height: 20px !important;
     max-width: 20px !important;
     max-height: 20px !important;
   }
   
-  /* Uber Eats and order buttons */
-  section.relative .absolute a[href*="ubereats"],
-  section.relative .absolute > div:last-child > a {
+  /* Order buttons container - ensure flex wrap */
+  section.relative .absolute > div:last-child {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  
+  /* Just Eat and Uber Eats buttons */
+  section.relative .absolute a[href*="just-eat"],
+  section.relative .absolute a[href*="ubereats"] {
     font-size: 11px !important;
     padding: 6px 10px !important;
     max-width: none !important;
     white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 }
 
@@ -45,7 +54,7 @@
   section.relative .absolute a[href*="facebook"],
   section.relative .absolute a[href*="tiktok"],
   section.relative .absolute a[href*="instagram"],
-  section.relative .absolute a[class*="hover:scale"] {
+  section.relative .absolute a[class*="hover:scale"]:not([href*="just-eat"]):not([href*="ubereats"]) {
     width: 28px !important;
     height: 28px !important;
     min-width: 28px !important;
@@ -58,20 +67,29 @@
   section.relative .absolute a[href*="facebook"] svg,
   section.relative .absolute a[href*="tiktok"] svg,
   section.relative .absolute a[href*="instagram"] svg,
-  section.relative .absolute a[class*="hover:scale"] svg {
+  section.relative .absolute a[class*="hover:scale"]:not([href*="just-eat"]):not([href*="ubereats"]) svg {
     width: 18px !important;
     height: 18px !important;
     max-width: 18px !important;
     max-height: 18px !important;
   }
   
-  /* Uber Eats and order buttons */
-  section.relative .absolute a[href*="ubereats"],
-  section.relative .absolute > div:last-child > a {
+  /* Order buttons container */
+  section.relative .absolute > div:last-child {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+  
+  /* Just Eat and Uber Eats buttons */
+  section.relative .absolute a[href*="just-eat"],
+  section.relative .absolute a[href*="ubereats"] {
     font-size: 10px !important;
     padding: 5px 8px !important;
     max-width: none !important;
     white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 }
 
@@ -81,7 +99,7 @@
   section.relative .absolute a[href*="facebook"],
   section.relative .absolute a[href*="tiktok"],
   section.relative .absolute a[href*="instagram"],
-  section.relative .absolute a[class*="hover:scale"] {
+  section.relative .absolute a[class*="hover:scale"]:not([href*="just-eat"]):not([href*="ubereats"]) {
     width: 26px !important;
     height: 26px !important;
     min-width: 26px !important;
@@ -94,19 +112,28 @@
   section.relative .absolute a[href*="facebook"] svg,
   section.relative .absolute a[href*="tiktok"] svg,
   section.relative .absolute a[href*="instagram"] svg,
-  section.relative .absolute a[class*="hover:scale"] svg {
+  section.relative .absolute a[class*="hover:scale"]:not([href*="just-eat"]):not([href*="ubereats"]) svg {
     width: 16px !important;
     height: 16px !important;
     max-width: 16px !important;
     max-height: 16px !important;
   }
   
-  /* Uber Eats and order buttons */
-  section.relative .absolute a[href*="ubereats"],
-  section.relative .absolute > div:last-child > a {
+  /* Order buttons container */
+  section.relative .absolute > div:last-child {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+  }
+  
+  /* Just Eat and Uber Eats buttons */
+  section.relative .absolute a[href*="just-eat"],
+  section.relative .absolute a[href*="ubereats"] {
     font-size: 9px !important;
     padding: 4px 7px !important;
     max-width: none !important;
     white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 }
