@@ -32,9 +32,10 @@
   /* Uber Eats and order buttons */
   section.relative .absolute a[href*="ubereats"],
   section.relative .absolute > div:last-child > a {
-    font-size: 13px !important;
-    padding: 8px 12px !important;
-    max-width: 120px !important;
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    max-width: none !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -67,9 +68,10 @@
   /* Uber Eats and order buttons */
   section.relative .absolute a[href*="ubereats"],
   section.relative .absolute > div:last-child > a {
-    font-size: 12px !important;
-    padding: 6px 10px !important;
-    max-width: 100px !important;
+    font-size: 10px !important;
+    padding: 5px 8px !important;
+    max-width: none !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -102,8 +104,9 @@
   /* Uber Eats and order buttons */
   section.relative .absolute a[href*="ubereats"],
   section.relative .absolute > div:last-child > a {
-    font-size: 11px !important;
-    padding: 5px 8px !important;
-    max-width: 90px !important;
+    font-size: 9px !important;
+    padding: 4px 7px !important;
+    max-width: none !important;
+    white-space: nowrap !important;
   }
 }
