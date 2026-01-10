@@ -1,134 +1,164 @@
-/* Hero Section Mobile Optimization */
+/* Hero Section Mobile Optimization - Fix oversized buttons on mobile */
 
-/* Target the social media and order buttons specifically */
+/* Target ALL buttons and links in the hero overlay with maximum specificity */
 @media (max-width: 768px) {
-  /* Adjust hero height for tablets */
-  section.relative.h-80,
-  section.relative[class*="h-80"] {
-    height: 300px !important;
-    min-height: 300px;
+  /* Tablet: Reduce button sizes */
+  section.relative .absolute a,
+  section.relative .absolute a.hover\:scale-110,
+  section.relative .absolute a.hover\:scale-105 {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    padding: 8px !important;
   }
   
-  /* Reduce ALL link sizes in the hero overlay */
-  section.relative .absolute a {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    min-height: 36px !important;
-    padding: 6px !important;
-  }
-  
-  /* Reduce icon/svg sizes inside links */
-  section.relative .absolute a > * {
+  /* SVG icons inside buttons */
+  section.relative .absolute a svg {
     width: 24px !important;
     height: 24px !important;
     max-width: 24px !important;
     max-height: 24px !important;
   }
   
-  /* Reduce text sizes */
-  section.relative .absolute p {
-    font-size: 12px !important;
-  }
-  
-  /* Reduce gaps */
-  section.relative .absolute .flex {
-    gap: 8px !important;
-  }
-  
-  /* Special handling for the Uber Eats button (it has text) */
-  section.relative .absolute a.bg-primary,
-  section.relative .absolute a[class*="bg-"] {
+  /* Uber Eats button with text */
+  section.relative .absolute a:has(svg) + a,
+  section.relative .absolute a:not(:has(svg)) {
     width: auto !important;
-    padding: 6px 12px !important;
-    font-size: 12px !important;
+    max-width: 120px !important;
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+  
+  /* Reduce gaps between buttons */
+  section.relative .absolute .flex,
+  section.relative .absolute div[class*="flex"] {
+    gap: 10px !important;
+  }
+  
+  /* Reduce text sizes */
+  section.relative .absolute p,
+  section.relative .absolute h2,
+  section.relative .absolute h3 {
+    font-size: 14px !important;
   }
 }
 
 @media (max-width: 640px) {
-  /* Further reduce height on small phones */
-  section.relative.h-80,
-  section.relative[class*="h-80"] {
-    height: 260px !important;
-    min-height: 260px;
+  /* Mobile: Further reduce button sizes */
+  section.relative .absolute a,
+  section.relative .absolute a.hover\:scale-110,
+  section.relative .absolute a.hover\:scale-105 {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+    padding: 6px !important;
   }
   
-  /* Even smaller links */
-  section.relative .absolute a {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    min-height: 32px !important;
-    padding: 5px !important;
-  }
-  
-  /* Smaller icons */
-  section.relative .absolute a > * {
+  /* SVG icons */
+  section.relative .absolute a svg {
     width: 20px !important;
     height: 20px !important;
     max-width: 20px !important;
     max-height: 20px !important;
   }
   
-  /* Smaller text */
-  section.relative .absolute p {
-    font-size: 11px !important;
-  }
-  
-  /* Reduce gaps further */
-  section.relative .absolute .flex {
-    gap: 6px !important;
-  }
-  
   /* Uber Eats button */
-  section.relative .absolute a.bg-primary,
-  section.relative .absolute a[class*="bg-"] {
+  section.relative .absolute a:has(svg) + a,
+  section.relative .absolute a:not(:has(svg)) {
     width: auto !important;
-    padding: 5px 10px !important;
-    font-size: 11px !important;
+    max-width: 100px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+  
+  /* Tighter gaps */
+  section.relative .absolute .flex,
+  section.relative .absolute div[class*="flex"] {
+    gap: 8px !important;
+  }
+  
+  /* Smaller text */
+  section.relative .absolute p,
+  section.relative .absolute h2,
+  section.relative .absolute h3 {
+    font-size: 13px !important;
   }
 }
 
 @media (max-width: 480px) {
-  /* Optimize for very small screens */
-  section.relative.h-80,
-  section.relative[class*="h-80"] {
-    height: 240px !important;
-    min-height: 240px;
+  /* Small mobile: Minimal button sizes */
+  section.relative .absolute a,
+  section.relative .absolute a.hover\:scale-110,
+  section.relative .absolute a.hover\:scale-105 {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    padding: 5px !important;
   }
   
-  /* Minimal link size */
-  section.relative .absolute a {
-    width: 28px !important;
-    height: 28px !important;
-    min-width: 28px !important;
-    min-height: 28px !important;
-    padding: 4px !important;
-  }
-  
-  /* Very small icons */
-  section.relative .absolute a > * {
+  /* Very small SVG icons */
+  section.relative .absolute a svg {
     width: 18px !important;
     height: 18px !important;
     max-width: 18px !important;
     max-height: 18px !important;
   }
   
-  /* Reduce padding */
-  section.relative .absolute {
-    padding: 6px !important;
-  }
-  
   /* Compact Uber Eats button */
-  section.relative .absolute a.bg-primary,
-  section.relative .absolute a[class*="bg-"] {
+  section.relative .absolute a:has(svg) + a,
+  section.relative .absolute a:not(:has(svg)) {
     width: auto !important;
-    padding: 4px 8px !important;
-    font-size: 10px !important;
+    max-width: 90px !important;
+    padding: 5px 10px !important;
+    font-size: 11px !important;
   }
   
-  /* Hide "Order Online" text on very small screens */
-  section.relative .absolute p:contains("Order Online") {
-    display: none !important;
+  /* Minimal gaps */
+  section.relative .absolute .flex,
+  section.relative .absolute div[class*="flex"] {
+    gap: 6px !important;
+  }
+  
+  /* Very small text */
+  section.relative .absolute p,
+  section.relative .absolute h2,
+  section.relative .absolute h3 {
+    font-size: 12px !important;
+  }
+  
+  /* Reduce overall padding of the overlay */
+  section.relative .absolute {
+    padding: 8px !important;
+  }
+}
+
+/* Force apply to all button-like elements */
+@media (max-width: 768px) {
+  section.relative .absolute > div > div > a {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  section.relative .absolute > div > div > a {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section.relative .absolute > div > div > a {
+    width: 32px !important;
+    height: 32px !important;
   }
 }
