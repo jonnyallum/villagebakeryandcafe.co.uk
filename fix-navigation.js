@@ -34,9 +34,12 @@
                 case 'menu':
                     link.addEventListener('click', (e) => {
                         e.preventDefault();
-                        const menuSection = findSectionByText(['Our Menu', 'Big Breakfasts']);
+                        const menuSection = findSectionByText(['Our Menu', 'Big Breakfasts', 'Purbrook Porker']);
                         if (menuSection) {
-                            menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            const offset = 100; // Header height offset
+                            const elementPosition = menuSection.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - offset;
+                            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                         }
                     });
                     break;
@@ -56,9 +59,12 @@
                 case 'challenge':
                     link.addEventListener('click', (e) => {
                         e.preventDefault();
-                        const challengeSection = findSectionByText(['Monthly Challenge', 'Big plates']);
+                        const challengeSection = findSectionByText(['The Monthly Challenge', 'Monthly Challenge', 'Big plates', 'Big flavours']);
                         if (challengeSection) {
-                            challengeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            const offset = 100; // Header height offset
+                            const elementPosition = challengeSection.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - offset;
+                            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                         }
                     });
                     break;
@@ -66,12 +72,15 @@
                 case 'contact':
                     link.addEventListener('click', (e) => {
                         e.preventDefault();
-                        const contactSection = findSectionByText(['Visit Us', '142 London Road', 'Opening Times']);
+                        const contactSection = findSectionByText(['Visit Us', '142 London Road', 'Opening Times', 'Phone:', '07840']);
                         if (contactSection) {
-                            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            const offset = 100; // Header height offset
+                            const elementPosition = contactSection.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - offset;
+                            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                         } else {
                             // Scroll to footer
-                            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                            window.scrollTo({ top: document.body.scrollHeight - 300, behavior: 'smooth' });
                         }
                     });
                     break;
