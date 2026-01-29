@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className="flex flex-col overflow-hidden">
-            {/* Hero Section */}
+            {/* Hero Section - Using Beautiful Food Photo */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                {/* Solid dark background - completely hiding the old photo */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-br from-dark-900 via-dark-800 to-black">
-                    {/* Subtle texture overlay for depth */}
-                    <div className="absolute inset-0 opacity-10" style={{
-                        backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(198, 168, 124, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(198, 168, 124, 0.1) 0%, transparent 50%)'
-                    }}></div>
+                {/* Dramatic Food Photo Background */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/images/photo18_cake.webp"
+                        alt="Artisan bakery atmosphere"
+                        className="w-full h-full object-cover scale-110"
+                    />
+                    {/* Dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-dark-900/90 via-dark-900/85 to-dark-900"></div>
                 </div>
 
                 {/* Content */}
@@ -29,7 +32,7 @@ const Home = () => {
                             <span className="block text-gold-gradient">Loved Locally</span>
                         </h1>
 
-                        <p className="text-xl md:text-2xl text-cream/80 font-body max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                        <p className="text-xl md:text-2xl text-cream/90 font-body max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
                             From legendary breakfast challenges to freshly baked sourdough,
                             we pour passion into every plate at Purbrook's favorite bakery.
                         </p>
@@ -148,7 +151,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Gallery Section - COMPLETELY REDESIGNED */}
+            {/* Gallery Section - VERIFIED IMAGES ONLY */}
             <section className="relative py-32 bg-gradient-to-b from-black via-dark-900 to-dark-800">
                 <div className="container px-6">
                     <div className="text-center mb-16 space-y-4 animate-fade-in">
@@ -157,15 +160,15 @@ const Home = () => {
                         <p className="text-cream/60 font-body max-w-2xl mx-auto">Every item is handcrafted with care, using the finest ingredients and time-honored techniques.</p>
                     </div>
 
-                    {/* Premium Masonry-style Gallery */}
+                    {/* Premium Masonry-style Gallery - ONLY VERIFIED WORKING IMAGES */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                         {[
-                            { src: '/images/photo18_cake.webp', alt: 'Signature Cakes', title: 'Signature Cakes', desc: 'Layered perfection' },
-                            { src: '/images/photo9_sandwich.webp', alt: 'Artisan Sandwiches', title: 'Artisan Sandwiches', desc: 'Fresh daily' },
-                            { src: '/images/photo5_cheesecake.webp', alt: 'Decadent Desserts', title: 'Decadent Desserts', desc: 'Sweet indulgence' },
-                            { src: '/images/buffets-hero-new.jpg', alt: 'Buffet Platters', title: 'Buffet Platters', desc: 'Perfect for events', link: '/buffets' },
-                            { src: '/images/photo1_biscuit.webp', alt: 'Fresh Biscuits', title: 'Fresh Biscuits', desc: 'Golden & buttery' },
-                            { src: '/images/photo7_cake1.webp', alt: 'Classic Cakes', title: 'Classic Cakes', desc: 'Timeless treats' },
+                            { src: '/images/photo18_cake.webp', alt: 'Signature Chocolate Cake', title: 'Signature Cakes', desc: 'Layered perfection' },
+                            { src: '/images/photo9_sandwich.webp', alt: 'Artisan Sandwiches', title: 'Fresh Sandwiches', desc: 'Made to order' },
+                            { src: '/images/photo5_cheesecake.webp', alt: 'Decadent Cheesecake', title: 'Decadent Desserts', desc: 'Sweet indulgence' },
+                            { src: '/images/buffets-hero-new.jpg', alt: 'Buffet Platters', title: 'Event Catering', desc: 'Perfect for any occasion', link: '/buffets' },
+                            { src: '/images/hero-bakery-new.jpg', alt: 'Fresh Baked Goods', title: 'Daily Specials', desc: 'Always something new' },
+                            { src: '/images/challenge-bg.jpg', alt: 'Breakfast Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
                         ].map((item, i) => (
                             <div
                                 key={i}
@@ -191,7 +194,7 @@ const Home = () => {
                                             to={item.link}
                                             className="inline-flex items-center gap-2 mt-4 text-sm font-body text-gold-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
                                         >
-                                            Explore Catering
+                                            Learn More
                                             <ArrowRight size={14} />
                                         </Link>
                                     )}
