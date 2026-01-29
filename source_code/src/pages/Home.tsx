@@ -8,12 +8,12 @@ const Home = () => {
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
                 {/* Background Image with Parallax */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-dark-900/40 via-dark-900/60 to-dark-900"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-dark-900/85 via-dark-900/95 to-dark-900"></div>
                     <img
                         src="/images/hero-bakery-new.jpg"
-                        alt="Fresh artisan bread"
-                        className="w-full h-full object-cover scale-110"
-                        style={{ objectPosition: '50% 40%' }}
+                        alt="Village Bakery atmosphere"
+                        className="w-full h-full object-cover scale-110 brightness-75"
+                        style={{ objectPosition: '50% 55%', filter: 'blur(1.5px)' }}
                     />
                 </div>
 
@@ -161,8 +161,8 @@ const Home = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
                         {/* Large Feature */}
-                        <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer">
-                            <img src="/images/photo18_cake.webp" alt="Signature Cakes" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer aspect-square">
+                            <img src="/images/photo18_cake.webp" alt="Signature Cakes" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                                 <span className="text-2xl font-display font-bold text-cream transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Signature Cakes</span>
@@ -174,13 +174,13 @@ const Home = () => {
                             { src: '/images/photo5_cheesecake.webp', alt: 'Cheesecake' },
                         ].map((img, i) => (
                             <div key={i} className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer">
-                                <img src={img.src} alt={img.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
                         ))}
 
                         <div className="col-span-2 relative aspect-[2/1] rounded-2xl overflow-hidden group cursor-pointer">
-                            <img src="/images/buffets-hero-new.jpg" alt="Buffet Spreads" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/images/buffets-hero-new.jpg" alt="Buffet Spreads" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                                 <Link to="/buffets" className="text-xl font-display font-bold text-gold-300 border-b-2 border-gold-300 pb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
