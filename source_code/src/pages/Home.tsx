@@ -164,8 +164,8 @@ const Home = () => {
                             { src: '/images/photo9_sandwich.webp', alt: 'Artisan Sandwiches', title: 'Artisan Sandwiches', desc: 'Fresh daily' },
                             { src: '/images/photo5_cheesecake.webp', alt: 'Decadent Desserts', title: 'Decadent Desserts', desc: 'Sweet indulgence' },
                             { src: '/images/buffets-hero-new.jpg', alt: 'Buffet Platters', title: 'Buffet Platters', desc: 'Perfect for events', link: '/buffets' },
-                            { src: '/images/photo10_soup.webp', alt: 'Hearty Soups', title: 'Hearty Soups', desc: 'Warming comfort' },
-                            { src: '/images/photo21_sandwich4.webp', alt: 'Fresh Baguettes', title: 'Fresh Baguettes', desc: 'Crispy & golden' },
+                            { src: '/images/photo1_biscuit.webp', alt: 'Fresh Biscuits', title: 'Fresh Biscuits', desc: 'Golden & buttery' },
+                            { src: '/images/photo7_cake1.webp', alt: 'Classic Cakes', title: 'Classic Cakes', desc: 'Timeless treats' },
                         ].map((item, i) => (
                             <div
                                 key={i}
