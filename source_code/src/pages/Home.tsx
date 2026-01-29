@@ -6,15 +6,12 @@ const Home = () => {
         <div className="flex flex-col overflow-hidden">
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                {/* Background Image with Parallax */}
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-dark-900/85 via-dark-900/95 to-dark-900"></div>
-                    <img
-                        src="/images/hero-bakery-new.jpg"
-                        alt="Village Bakery atmosphere"
-                        className="w-full h-full object-cover scale-110 brightness-75"
-                        style={{ objectPosition: '50% 55%', filter: 'blur(1.5px)' }}
-                    />
+                {/* Solid dark background - completely hiding the old photo */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-br from-dark-900 via-dark-800 to-black">
+                    {/* Subtle texture overlay for depth */}
+                    <div className="absolute inset-0 opacity-10" style={{
+                        backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(198, 168, 124, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(198, 168, 124, 0.1) 0%, transparent 50%)'
+                    }}></div>
                 </div>
 
                 {/* Content */}
@@ -23,13 +20,13 @@ const Home = () => {
                         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold-300/10 backdrop-blur-sm border border-gold-300/20 animate-fade-in">
                             <Sparkles size={16} className="text-gold-300" />
                             <span className="text-gold-300 tracking-[0.2em] font-body font-medium text-sm uppercase">
-                                Crafting Excellence Since 2014
+                                Handcrafted Daily Since 2014
                             </span>
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-display font-bold leading-[1.1] animate-fade-in-up delay-100">
                             <span className="block text-cream mb-4">Artisan Baking</span>
-                            <span className="block text-gold-gradient">Community Heart</span>
+                            <span className="block text-gold-gradient">Loved Locally</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-cream/80 font-body max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
@@ -99,7 +96,7 @@ const Home = () => {
                                 <img
                                     src="/images/challenge-bg.jpg"
                                     alt="The Big Breakfast Challenge"
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8 right-8">
@@ -151,43 +148,61 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Gallery Section */}
-            <section className="relative py-32 bg-gradient-to-b from-black to-dark-900">
+            {/* Gallery Section - COMPLETELY REDESIGNED */}
+            <section className="relative py-32 bg-gradient-to-b from-black via-dark-900 to-dark-800">
                 <div className="container px-6">
-                    <div className="text-center mb-16 space-y-4">
+                    <div className="text-center mb-16 space-y-4 animate-fade-in">
                         <span className="text-gold-300 font-body font-bold tracking-widest uppercase text-sm">Our Craft</span>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">Fresh From The Kitchen</h2>
+                        <p className="text-cream/60 font-body max-w-2xl mx-auto">Every item is handcrafted with care, using the finest ingredients and time-honored techniques.</p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                        {/* Large Feature */}
-                        <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer aspect-square">
-                            <img src="/images/photo18_cake.webp" alt="Signature Cakes" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <span className="text-2xl font-display font-bold text-cream transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Signature Cakes</span>
-                            </div>
-                        </div>
-
+                    {/* Premium Masonry-style Gallery */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                         {[
-                            { src: '/images/photo9_sandwich.webp', alt: 'Sandwiches' },
-                            { src: '/images/photo5_cheesecake.webp', alt: 'Cheesecake' },
-                        ].map((img, i) => (
-                            <div key={i} className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer">
-                                <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
-                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            { src: '/images/photo18_cake.webp', alt: 'Signature Cakes', title: 'Signature Cakes', desc: 'Layered perfection' },
+                            { src: '/images/photo9_sandwich.webp', alt: 'Artisan Sandwiches', title: 'Artisan Sandwiches', desc: 'Fresh daily' },
+                            { src: '/images/photo5_cheesecake.webp', alt: 'Decadent Desserts', title: 'Decadent Desserts', desc: 'Sweet indulgence' },
+                            { src: '/images/buffets-hero-new.jpg', alt: 'Buffet Platters', title: 'Buffet Platters', desc: 'Perfect for events', link: '/buffets' },
+                            { src: '/images/photo10_soup.webp', alt: 'Hearty Soups', title: 'Hearty Soups', desc: 'Warming comfort' },
+                            { src: '/images/photo21_sandwich4.webp', alt: 'Fresh Baguettes', title: 'Fresh Baguettes', desc: 'Crispy & golden' },
+                        ].map((item, i) => (
+                            <div
+                                key={i}
+                                className="group relative rounded-2xl overflow-hidden bg-dark-800 border border-gold-300/10 hover:border-gold-300/30 transition-all duration-700 animate-scale-in"
+                                style={{ animationDelay: `${i * 100}ms` }}
+                            >
+                                {/* Image Container */}
+                                <div className="relative aspect-[4/3] overflow-hidden">
+                                    <img
+                                        src={item.src}
+                                        alt={item.alt}
+                                        className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-1000"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                                </div>
+
+                                {/* Content Overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                    <h3 className="text-xl font-display font-bold text-cream mb-1">{item.title}</h3>
+                                    <p className="text-gold-300 font-body text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{item.desc}</p>
+                                    {item.link && (
+                                        <Link
+                                            to={item.link}
+                                            className="inline-flex items-center gap-2 mt-4 text-sm font-body text-gold-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"
+                                        >
+                                            Explore Catering
+                                            <ArrowRight size={14} />
+                                        </Link>
+                                    )}
+                                </div>
+
+                                {/* Shine effect on hover */}
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                                </div>
                             </div>
                         ))}
-
-                        <div className="col-span-2 relative aspect-[2/1] rounded-2xl overflow-hidden group cursor-pointer">
-                            <img src="/images/buffets-hero-new.jpg" alt="Buffet Spreads" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <Link to="/buffets" className="text-xl font-display font-bold text-gold-300 border-b-2 border-gold-300 pb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                    Explore Catering
-                                </Link>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
