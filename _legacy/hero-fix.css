@@ -1,0 +1,164 @@
+/* Hero Section Mobile Optimization - Fix oversized buttons on mobile */
+
+/* Target ALL buttons and links in the hero overlay with maximum specificity */
+@media (max-width: 768px) {
+  /* Tablet: Reduce button sizes */
+  section.relative .absolute a,
+  section.relative .absolute a.hover\:scale-110,
+  section.relative .absolute a.hover\:scale-105 {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    padding: 8px !important;
+  }
+  
+  /* SVG icons inside buttons */
+  section.relative .absolute a svg {
+    width: 24px !important;
+    height: 24px !important;
+    max-width: 24px !important;
+    max-height: 24px !important;
+  }
+  
+  /* Uber Eats button with text */
+  section.relative .absolute a:has(svg) + a,
+  section.relative .absolute a:not(:has(svg)) {
+    width: auto !important;
+    max-width: 120px !important;
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+  
+  /* Reduce gaps between buttons */
+  section.relative .absolute .flex,
+  section.relative .absolute div[class*="flex"] {
+    gap: 10px !important;
+  }
+  
+  /* Reduce text sizes */
+  section.relative .absolute p,
+  section.relative .absolute h2,
+  section.relative .absolute h3 {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Mobile: Further reduce button sizes */
+  section.relative .absolute a,
+  section.relative .absolute a.hover\:scale-110,
+  section.relative .absolute a.hover\:scale-105 {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+    padding: 6px !important;
+  }
+  
+  /* SVG icons */
+  section.relative .absolute a svg {
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+  }
+  
+  /* Uber Eats button */
+  section.relative .absolute a:has(svg) + a,
+  section.relative .absolute a:not(:has(svg)) {
+    width: auto !important;
+    max-width: 100px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+  
+  /* Tighter gaps */
+  section.relative .absolute .flex,
+  section.relative .absolute div[class*="flex"] {
+    gap: 8px !important;
+  }
+  
+  /* Smaller text */
+  section.relative .absolute p,
+  section.relative .absolute h2,
+  section.relative .absolute h3 {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile: Minimal button sizes */
+  section.relative .absolute a,
+  section.relative .absolute a.hover\:scale-110,
+  section.relative .absolute a.hover\:scale-105 {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    padding: 5px !important;
+  }
+  
+  /* Very small SVG icons */
+  section.relative .absolute a svg {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+  }
+  
+  /* Compact Uber Eats button */
+  section.relative .absolute a:has(svg) + a,
+  section.relative .absolute a:not(:has(svg)) {
+    width: auto !important;
+    max-width: 90px !important;
+    padding: 5px 10px !important;
+    font-size: 11px !important;
+  }
+  
+  /* Minimal gaps */
+  section.relative .absolute .flex,
+  section.relative .absolute div[class*="flex"] {
+    gap: 6px !important;
+  }
+  
+  /* Very small text */
+  section.relative .absolute p,
+  section.relative .absolute h2,
+  section.relative .absolute h3 {
+    font-size: 12px !important;
+  }
+  
+  /* Reduce overall padding of the overlay */
+  section.relative .absolute {
+    padding: 8px !important;
+  }
+}
+
+/* Force apply to all button-like elements */
+@media (max-width: 768px) {
+  section.relative .absolute > div > div > a {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  section.relative .absolute > div > div > a {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section.relative .absolute > div > div > a {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
