@@ -38,7 +38,7 @@ const Buffets = () => {
                         Need food for a party, meeting, or celebration? We've got you covered. All our buffet trays are <span className="text-gold-300 font-semibold">freshly made to order</span> in our kitchen, using the same quality ingredients we serve in the café every day.
                     </p>
                     <p className="text-lg text-cream/80 font-body leading-relaxed">
-                        Everything is made by us, from scratch. Our sandwiches are prepared fresh with a variety of fillings on white or brown bread, and our cakes are baked right here. Just give us a bit of notice, and we'll create exactly what you need.
+                        Our sandwiches are prepared fresh with a variety of fillings on white or brown bread. Just give us a bit of notice, and we'll create exactly what you need.
                     </p>
                 </div>
             </section>
@@ -61,7 +61,7 @@ const Buffets = () => {
                             {
                                 img: '/images/photo18_cake.webp',
                                 title: 'Cake Platters',
-                                desc: 'Our homemade cakes and traybakes. Brownies, flapjacks, sponges - the perfect sweet addition to any event.'
+                                desc: 'Our fresh cakes and traybakes. Brownies, flapjacks, sponges - the perfect sweet addition to any event.'
                             },
                             {
                                 img: '/images/buffet-sandwiches.jpg',

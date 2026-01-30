@@ -170,7 +170,7 @@ const Menu = () => {
                                 </div>
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Homemade Cakes</h3>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Fresh Cakes</h3>
                                         <span className="font-bold text-cream">Ask at counter</span>
                                     </div>
                                     <p className="text-cream/70 text-sm">Selection changes daily. Brownies, Flapjacks, Sponges.</p>

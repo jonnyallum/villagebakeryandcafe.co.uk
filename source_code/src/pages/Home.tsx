@@ -7,15 +7,23 @@ const Home = () => {
         <div className="flex flex-col overflow-hidden">
             {/* Hero Section - Using Beautiful Food Photo */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                {/* Dramatic Food Photo Background */}
+                {/* Dynamic Shopfront Background with Logo Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/photo18_cake.webp"
-                        alt="Artisan bakery atmosphere"
-                        className="w-full h-full object-cover scale-110"
+                        src="/images/hero-shopfront-black.png"
+                        alt="Village Bakery Shopfront"
+                        className="w-full h-full object-cover scale-105"
                     />
-                    {/* Dark overlay for text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-dark-900/90 via-dark-900/85 to-dark-900"></div>
+                    {/* Atmospheric Logo Watermark */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none overflow-hidden">
+                        <img
+                            src="/images/logo.png"
+                            alt=""
+                            className="w-[120%] max-w-none md:w-[80%] md:max-w-4xl object-contain invert brightness-0"
+                        />
+                    </div>
+                    {/* Dark overlay for text readability - Adjusted for black background */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-dark-900/80 via-dark-900/70 to-dark-900"></div>
                 </div>
 
                 {/* Content */}
@@ -24,12 +32,12 @@ const Home = () => {
                         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-olive-300/10 backdrop-blur-sm border border-olive-300/20 animate-fade-in">
                             <Sparkles size={16} className="text-olive-300" />
                             <span className="text-olive-300 tracking-[0.2em] font-body font-medium text-sm uppercase">
-                                Handcrafted Daily Since 2014
+                                Serving Daily Since 2014
                             </span>
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-display font-bold leading-[1.1] animate-fade-in-up delay-100">
-                            <span className="block text-cream mb-4">Artisan Baking</span>
+                            <span className="block text-cream mb-4">Fresh Baking</span>
                             <span className="block text-gold-gradient">Loved Locally</span>
                         </h1>
 
@@ -94,17 +102,18 @@ const Home = () => {
                 <div className="container relative px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         {/* Image */}
-                        <div className="order-2 lg:order-1 relative group animate-fade-in">
+                        <div className="order-2 lg:order-1 relative group animate-fade-in flex justify-center">
                             <div className="absolute -inset-4 bg-gradient-to-r from-gold-300/20 to-gold-600/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-700"></div>
-                            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border-2 border-gold-300/20 shadow-2xl">
-                                {/* Video Embed - Enhanced Visibility */}
-                                <div className="absolute inset-0 z-10">
+                            <div className="relative w-full max-w-md aspect-[3/4] rounded-3xl overflow-hidden border-2 border-gold-300/20 shadow-2xl bg-black flex items-center justify-center">
+                                {/* Video Embed - Enhanced Visibility & Centering */}
+                                <div className="z-10 w-full flex justify-center">
                                     <InstagramEmbed />
                                 </div>
+                                {/* Fallback/Background Image - Blurred & Centered */}
                                 <img
                                     src="/images/challenge-bg.jpg"
                                     alt="The Big Breakfast Challenge"
-                                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-1000 opacity-0"
+                                    className="absolute inset-0 w-full h-full object-cover object-center opacity-30 blur-sm"
                                 />
                             </div>
                         </div>
@@ -197,15 +206,15 @@ const Home = () => {
                     <div className="text-center mb-16 space-y-4 animate-fade-in">
                         <span className="text-gold-300 font-body font-bold tracking-widest uppercase text-sm">Our Craft</span>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">Fresh From The Kitchen</h2>
-                        <p className="text-cream/60 font-body max-w-2xl mx-auto">Every item is handcrafted with care, using the finest ingredients and time-honored techniques.</p>
+                        <p className="text-cream/60 font-body max-w-2xl mx-auto">Every item is prepared with care, using the finest ingredients.</p>
                     </div>
 
                     {/* Premium Masonry-style Gallery - ONLY VERIFIED WORKING IMAGES */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                         {[
                             { src: '/images/photo18_cake.webp', alt: 'Signature Chocolate Cake', title: 'Signature Cakes', desc: 'Layered perfection' },
-                            { src: '/images/photo9_sandwich.webp', alt: 'Artisan Sandwiches', title: 'Fresh Sandwiches', desc: 'Made to order' },
-                            { src: '/images/photo5_cheesecake.webp', alt: 'Decadent Cheesecake', title: 'Decadent Desserts', desc: 'Sweet indulgence' },
+                            { src: '/images/photo19_sandwich3.webp', alt: 'Fresh Sandwiches', title: 'Fresh Sandwiches', desc: 'Made to order' },
+                            { src: '/images/photo17_dessert2.webp', alt: 'Decadent Cheesecake', title: 'Decadent Desserts', desc: 'Sweet indulgence' },
                             { src: '/images/buffets-hero-new.jpg', alt: 'Buffet Platters', title: 'Event Catering', desc: 'Perfect for any occasion', link: '/buffets' },
                             { src: '/images/photo22_pastry.webp', alt: 'Fresh Baked Goods', title: 'Daily Specials', desc: 'Always something new' },
                             { src: '/images/challenge-bg.jpg', alt: 'Breakfast Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
@@ -275,12 +284,18 @@ const Home = () => {
                 <div className="container px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         {[
-                            '/images/photo18_cake.webp',
-                            '/images/photo9_sandwich.webp',
-                            '/images/photo22_pastry.webp',
-                            '/images/buffets-hero-new.jpg',
-                            '/images/hero-bakery-new.jpg',
-                            '/images/challenge-bg.jpg'
+                            '/images/new_stock/129955334_3490638874338770_6000996615654609337_n.jpg',
+                            '/images/new_stock/137505857_3579509675451689_2374564620046686557_n.jpg',
+                            '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg',
+                            '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg',
+                            '/images/new_stock/486516207_1481786956414930_2321442840945898864_n.jpg',
+                            '/images/new_stock/489340488_1499820237944935_5490590416000557979_n.jpg',
+                            '/images/new_stock/490146123_1501538671106425_4044332027040543873_n.jpg',
+                            '/images/new_stock/490456663_1501533701106922_8497712990594332240_n.jpg',
+                            '/images/new_stock/549791277_1644733560120268_2404535269820118760_n.jpg',
+                            '/images/new_stock/554040759_1650146012912356_7711737919927358654_n.jpg',
+                            '/images/new_stock/557642269_1650142809579343_6070543851528674382_n.jpg',
+                            '/images/new_stock/613761809_1741390033787953_8802348971884052694_n.jpg'
                         ].map((src, i) => (
                             <a
                                 key={i}
