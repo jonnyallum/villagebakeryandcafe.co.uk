@@ -212,12 +212,12 @@ const Home = () => {
                     {/* Premium Masonry-style Gallery - ONLY VERIFIED WORKING IMAGES */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                         {[
-                            { src: '/images/photo18_cake.webp', alt: 'Signature Chocolate Cake', title: 'Signature Cakes', desc: 'Layered perfection' },
-                            { src: '/images/photo19_sandwich3.webp', alt: 'Fresh Sandwiches', title: 'Fresh Sandwiches', desc: 'Made to order' },
-                            { src: '/images/photo17_dessert2.webp', alt: 'Decadent Cheesecake', title: 'Decadent Desserts', desc: 'Sweet indulgence' },
-                            { src: '/images/buffets-hero-new.jpg', alt: 'Buffet Platters', title: 'Event Catering', desc: 'Perfect for any occasion', link: '/buffets' },
-                            { src: '/images/photo22_pastry.webp', alt: 'Fresh Baked Goods', title: 'Daily Specials', desc: 'Always something new' },
-                            { src: '/images/challenge-bg.jpg', alt: 'Breakfast Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
+                            { src: '/images/new_stock/129955334_3490638874338770_6000996615654609337_n.jpg', alt: 'Fresh Cakes', title: 'Signature Cakes', desc: 'Layered perfection' },
+                            { src: '/images/new_stock/137505857_3579509675451689_2374564620046686557_n.jpg', alt: 'Fresh Sandwiches', title: 'Fresh Sandwiches', desc: 'Made to order' },
+                            { src: '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg', alt: 'Fresh Baguettes', title: 'Freshly Baked', desc: 'Crispy baguettes & rolls' },
+                            { src: '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg', alt: 'Buffet Platters', title: 'Event Catering', desc: 'Perfect for any occasion', link: '/buffets' },
+                            { src: '/images/new_stock/486516207_1481786956414930_2321442840945898864_n.jpg', alt: 'Fresh Baked Goods', title: 'Daily Specials', desc: 'Always something new' },
+                            { src: '/images/new_stock/489340488_1499820237944935_5490590416000557979_n.jpg', alt: 'Breakfast Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
                         ].map((item, i) => (
                             <div
                                 key={i}

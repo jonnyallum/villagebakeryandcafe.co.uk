@@ -17,7 +17,7 @@ const Footer = () => {
                             </span>
                         </div>
                         <p className="text-sm text-cream/60 font-body leading-relaxed max-w-xs">
-                            Handcrafted with love since 2014. Fresh artisan bakes, hearty breakfasts, and community warmth served daily in the heart of Purbrook.
+                            Serving with passion since 2014. Fresh bakes, hearty breakfasts, and community warmth served daily in the heart of Purbrook.
                         </p>
                         <div className="flex gap-4 mt-2">
                             <a
