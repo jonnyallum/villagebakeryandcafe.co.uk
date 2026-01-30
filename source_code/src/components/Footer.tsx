@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Facebook, Clock, Video } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -20,19 +20,33 @@ const Footer = () => {
                             Handcrafted with love since 2014. Fresh artisan bakes, hearty breakfasts, and community warmth served daily in the heart of Purbrook.
                         </p>
                         <div className="flex gap-4 mt-2">
-                            {[
-                                { icon: Facebook, label: 'Facebook' },
-                                { icon: Instagram, label: 'Instagram' }
-                            ].map((social, i) => (
-                                <a
-                                    key={i}
-                                    href="#"
-                                    className="group relative w-12 h-12 rounded-xl border border-gold-300/20 flex items-center justify-center overflow-hidden transition-all duration-500 hover:border-gold-300 hover:scale-110"
-                                >
-                                    <div className="absolute inset-0 bg-gradient-to-br from-gold-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    <social.icon className="relative z-10 text-gold-300/60 group-hover:text-gold-300 transition-colors duration-300" size={20} />
-                                </a>
-                            ))}
+                            <a
+                                href="https://www.facebook.com/theVillagebakeryandcafe/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative w-12 h-12 rounded-xl border border-gold-300/20 flex items-center justify-center overflow-hidden transition-all duration-500 hover:border-gold-300 hover:scale-110"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-gold-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <Facebook className="relative z-10 text-gold-300/60 group-hover:text-gold-300 transition-colors duration-300" size={20} />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/thevillagebakerycafe/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative w-12 h-12 rounded-xl border border-gold-300/20 flex items-center justify-center overflow-hidden transition-all duration-500 hover:border-gold-300 hover:scale-110"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-gold-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <Instagram className="relative z-10 text-gold-300/60 group-hover:text-gold-300 transition-colors duration-300" size={20} />
+                            </a>
+                            <a
+                                href="https://www.tiktok.com/@thevillagebakerypurbrook"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative w-12 h-12 rounded-xl border border-gold-300/20 flex items-center justify-center overflow-hidden transition-all duration-500 hover:border-gold-300 hover:scale-110"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-gold-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <Video className="relative z-10 text-gold-300/60 group-hover:text-gold-300 transition-colors duration-300" size={20} />
+                            </a>
                         </div>
                     </div>
 

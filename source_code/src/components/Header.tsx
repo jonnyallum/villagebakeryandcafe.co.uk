@@ -71,8 +71,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${isScrolled
-          ? 'bg-dark-900/80 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] border-b border-gold-300/10'
-          : 'bg-transparent'
+        ? 'bg-dark-900/80 backdrop-blur-md border-b border-olive-300/10'
+        : 'bg-transparent'
         }`}
     >
       <div className="container mx-auto px-6">
@@ -82,7 +82,7 @@ const Header = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-gold-300 to-gold-600 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
               <div className="relative w-14 h-14 bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 rounded-2xl flex items-center justify-center shadow-xl">
-                <UtensilsCrossed className="text-dark-900" size={26} strokeWidth={2.5} />
+                <img src="/images/logo.png" alt="Village Bakery Logo" className="w-full h-full object-cover opacity-90" />
               </div>
             </div>
             <div className="flex flex-col">
@@ -101,19 +101,19 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`relative font-body text-sm font-medium tracking-wide transition-all duration-300 group ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80 hover:text-cream'
-                  }`}
+                className={`relative font - body text - sm font - medium tracking - wide transition - all duration - 300 group ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80 hover:text-cream'
+                  } `}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-gold-300 to-gold-600 transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
+                <span className={`absolute - bottom - 1 left - 0 h - 0.5 bg - gradient - to - r from - gold - 300 to - gold - 600 transition - all duration - 300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                  } `}></span>
               </Link>
             ))}
 
             {/* Opening Hours Badge */}
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-dark-800/60 backdrop-blur-sm border border-gold-300/20">
               <Clock size={14} className={isOpen ? 'text-green-400' : 'text-gold-300/60'} />
-              <span className={`text-xs font-body font-medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'}`}>
+              <span className={`text - xs font - body font - medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'} `}>
                 {statusText}
               </span>
             </div>
@@ -143,7 +143,7 @@ const Header = () => {
               {/* Opening Hours Badge - Mobile */}
               <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-dark-900/60 border border-gold-300/20">
                 <Clock size={16} className={isOpen ? 'text-green-400' : 'text-gold-300/60'} />
-                <span className={`text-sm font-body font-medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'}`}>
+                <span className={`text - sm font - body font - medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'} `}>
                   {statusText}
                 </span>
               </div>
@@ -152,8 +152,8 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-lg font-body font-medium py-3 transition-colors duration-300 ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80'
-                    }`}
+                  className={`text - lg font - body font - medium py - 3 transition - colors duration - 300 ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80'
+                    } `}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
