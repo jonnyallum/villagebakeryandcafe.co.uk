@@ -35,10 +35,10 @@ const Buffets = () => {
             <section className="relative py-24 bg-gradient-to-b from-dark-900 to-dark-800">
                 <div className="container px-6 max-w-4xl mx-auto text-center space-y-8">
                     <p className="text-lg text-cream/80 font-body leading-relaxed">
-                        Need food for a party, meeting, or celebration? We've got you covered. All our buffet trays are <span className="text-gold-300 font-semibold">freshly made to order</span> in our kitchen, using the same quality ingredients we serve in the café every day.
+                        Need food for a party, meeting, or celebration? We've got you covered. All our buffet trays are <span className="text-gold-300 font-semibold">£15 per tray</span> and freshly made to order in our kitchen, using the same quality ingredients we serve in the café every day.
                     </p>
                     <p className="text-lg text-cream/80 font-body leading-relaxed">
-                        Our sandwiches are prepared fresh with a variety of fillings on white or brown bread. Just give us a bit of notice, and we'll create exactly what you need.
+                        Every buffet is <span className="text-gold-300 font-semibold">bespoke to each customer</span> with the fillings, treats, and portion sizes you want. Just give us a bit of notice and we’ll build a spread that fits your event perfectly.
                     </p>
                 </div>
             </section>
@@ -54,17 +54,17 @@ const Buffets = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {[
                             {
-                                img: '/images/photo21_sandwich4.webp',
+                                img: '/images/buffet-sandwiches.jpg',
                                 title: 'Sandwich Platters',
                                 desc: 'Freshly made with premium fillings: ham, cheese, tuna mayo, chicken mayo, egg mayo. White or brown bread, cut to perfection.'
                             },
                             {
-                                img: '/images/photo18_cake.webp',
+                                img: '/images/buffet-header.jpg',
                                 title: 'Cake Platters',
                                 desc: 'Our fresh cakes and traybakes. Brownies, flapjacks, sponges - the perfect sweet addition to any event.'
                             },
                             {
-                                img: '/images/buffet-sandwiches.jpg',
+                                img: '/images/buffets-hero-new.jpg',
                                 title: 'Mixed Platters',
                                 desc: 'Can\'t decide? We create beautiful mixed trays combining our savory sandwiches with sweet treats.'
                             }
@@ -99,10 +99,10 @@ const Buffets = () => {
                             <div className="relative bg-gradient-to-br from-dark-800/90 to-dark-900/90 backdrop-blur-xl border border-gold-300/20 rounded-3xl p-12 md:p-16 text-center shadow-2xl">
                                 <h2 className="text-4xl md:text-5xl font-display font-bold text-cream mb-6">Simple, Fair Pricing</h2>
                                 <p className="text-2xl text-cream/80 font-body mb-4">
-                                    Buffet trays start from <span className="text-gold-300 font-bold text-3xl">£15</span>
+                                    Buffet trays are <span className="text-gold-300 font-bold text-3xl">£15 per tray</span>
                                 </p>
                                 <p className="text-cream/60 font-body mb-10 max-w-lg mx-auto">
-                                    Prices vary based on selection and guest count. We cater for groups of any size.
+                                    Every tray is crafted to suit your guest list, with bespoke selections and flexible portions.
                                 </p>
 
                                 <div className="h-px w-32 bg-gradient-to-r from-transparent via-gold-300/30 to-transparent mx-auto mb-10"></div>
@@ -120,8 +120,8 @@ const Buffets = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 pt-16 border-t border-gold-300/10">
                                     {[
                                         'Freshly made to order',
-                                        'Quality ingredients',
-                                        'Flexible portions'
+                                        'Bespoke fillings & portions',
+                                        'Delivered with care'
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center justify-center gap-3">
                                             <CheckCircle2 className="text-gold-300 shrink-0" size={20} />

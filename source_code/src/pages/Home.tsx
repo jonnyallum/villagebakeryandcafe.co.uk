@@ -10,8 +10,8 @@ const Home = () => {
                 {/* Dynamic Shopfront Background with Logo Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/hero-shopfront-black.png"
-                        alt="Village Bakery Shopfront"
+                        src="/images/hero-bakery-new.jpg"
+                        alt="Village Bakery Fresh Bakes"
                         className="w-full h-full object-cover scale-105"
                     />
                     {/* Atmospheric Logo Watermark */}
@@ -37,12 +37,12 @@ const Home = () => {
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-display font-bold leading-[1.1] animate-fade-in-up delay-100">
-                            <span className="block text-cream mb-4">Fresh Baking</span>
-                            <span className="block text-gold-gradient">Loved Locally</span>
+                            <span className="block text-cream mb-4">Fresh Food</span>
+                            <span className="block text-gold-gradient">Warm Welcome</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-cream/90 font-body max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-                            From legendary breakfast challenges to freshly baked sourdough,
+                            From legendary breakfast challenges to showstopping cakes,
                             we pour passion into every plate at Purbrook's favorite bakery.
                         </p>
 
@@ -214,9 +214,9 @@ const Home = () => {
                         {[
                             { src: '/images/new_stock/129955334_3490638874338770_6000996615654609337_n.jpg', alt: 'Fresh Cakes', title: 'Signature Cakes', desc: 'Layered perfection' },
                             { src: '/images/new_stock/137505857_3579509675451689_2374564620046686557_n.jpg', alt: 'Fresh Sandwiches', title: 'Fresh Sandwiches', desc: 'Made to order' },
-                            { src: '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg', alt: 'Fresh Baguettes', title: 'Freshly Baked', desc: 'Crispy baguettes & rolls' },
-                            { src: '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg', alt: 'Buffet Platters', title: 'Event Catering', desc: 'Perfect for any occasion', link: '/buffets' },
                             { src: '/images/new_stock/486516207_1481786956414930_2321442840945898864_n.jpg', alt: 'Fresh Baked Goods', title: 'Daily Specials', desc: 'Always something new' },
+                            { src: '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg', alt: 'Fresh Baguettes', title: 'Freshly Baked Bread', desc: 'Crispy baguettes & rolls' },
+                            { src: '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg', alt: 'Buffet Platters', title: 'Event Catering', desc: 'Bespoke trays for any occasion', link: '/buffets' },
                             { src: '/images/new_stock/489340488_1499820237944935_5490590416000557979_n.jpg', alt: 'Breakfast Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
                         ].map((item, i) => (
                             <div
