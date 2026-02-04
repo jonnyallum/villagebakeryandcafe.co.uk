@@ -260,29 +260,95 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Instagram Social Proof (Static "Feed" for Zero Maintenance) */}
-            <section className="relative py-24 bg-dark-900 overflow-hidden">
+            {/* Social Growth Section - Help Us Reach 50K! */}
+            <section className="relative py-24 bg-gradient-to-b from-dark-800 to-dark-900 overflow-hidden">
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold-300/20 to-transparent"></div>
+                <div className="absolute -top-20 left-1/4 w-96 h-96 bg-gold-300/5 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-20 right-1/4 w-96 h-96 bg-gold-300/5 rounded-full blur-3xl"></div>
 
-                <div className="container px-6 text-center mb-12">
-                    <a
-                        href="https://www.instagram.com/thevillagebakerycafe/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-gold-300 hover:text-gold-200 transition-colors font-body font-bold tracking-widest uppercase text-sm mb-4"
-                    >
-                        <Sparkles size={14} />
-                        <span>@thevillagebakerycafe</span>
-                    </a>
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-cream mb-6">Follow Our Journey</h2>
-                    <p className="text-cream/60 font-body max-w-xl mx-auto">
-                        Daily specials, behind-the-scenes moments, and pure baking joy. Join our community of food lovers.
-                    </p>
-                </div>
+                <div className="container px-6 relative">
+                    <div className="text-center mb-16 space-y-4">
+                        <span className="text-gold-300 font-body font-bold tracking-widest uppercase text-sm">Join Our Community</span>
+                        <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">Help Us Reach 50,000 Followers!</h2>
+                        <p className="text-cream/60 font-body max-w-2xl mx-auto">
+                            We're building something special here in Purbrook. Follow us for daily specials, challenge attempts, behind-the-scenes baking, and community stories.
+                        </p>
+                    </div>
 
-                {/* Infinite Scroll / Grid Effect */}
-                <div className="container px-6">
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    {/* Social Platform Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+                        {/* TikTok - Most Active */}
+                        <a
+                            href="https://www.tiktok.com/@thevillagebakerycafe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative bg-dark-900 rounded-2xl p-8 border-2 border-gold-300/30 hover:border-gold-300 transition-all duration-500 overflow-hidden"
+                        >
+                            <div className="absolute top-4 right-4 px-3 py-1 bg-gold-300 text-dark-900 text-xs font-bold uppercase tracking-wider rounded-full">
+                                Most Active
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-gold-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="relative flex flex-col items-center text-center gap-4">
+                                <div className="w-20 h-20 bg-gradient-to-br from-gold-300/20 to-gold-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                                    <Video className="text-gold-300" size={36} />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-display font-bold text-cream mb-2">TikTok</h3>
+                                    <p className="text-cream/60 font-body text-sm mb-4">Challenge videos, baking moments & viral content</p>
+                                    <span className="inline-flex items-center gap-2 text-gold-300 font-body font-bold group-hover:gap-3 transition-all">
+                                        Follow Now <ArrowRight size={16} />
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+
+                        {/* Facebook */}
+                        <a
+                            href="https://www.facebook.com/thevillagebakerycafe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative bg-dark-900 rounded-2xl p-8 border border-gold-300/10 hover:border-gold-300/50 transition-all duration-500 overflow-hidden"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="relative flex flex-col items-center text-center gap-4">
+                                <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                                    <Facebook className="text-blue-400" size={36} />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-display font-bold text-cream mb-2">Facebook</h3>
+                                    <p className="text-cream/60 font-body text-sm mb-4">Community updates, events & daily specials</p>
+                                    <span className="inline-flex items-center gap-2 text-gold-300 font-body font-bold group-hover:gap-3 transition-all">
+                                        Like Our Page <ArrowRight size={16} />
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+
+                        {/* Instagram */}
+                        <a
+                            href="https://www.instagram.com/thevillagebakerycafe/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative bg-dark-900 rounded-2xl p-8 border border-gold-300/10 hover:border-gold-300/50 transition-all duration-500 overflow-hidden"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="relative flex flex-col items-center text-center gap-4">
+                                <div className="w-20 h-20 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                                    <Sparkles className="text-pink-400" size={36} />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-display font-bold text-cream mb-2">Instagram</h3>
+                                    <p className="text-cream/60 font-body text-sm mb-4">Beautiful food shots & stories from the kitchen</p>
+                                    <span className="inline-flex items-center gap-2 text-gold-300 font-body font-bold group-hover:gap-3 transition-all">
+                                        Follow Us <ArrowRight size={16} />
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {/* Photo Grid Preview */}
+                    <div className="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-5xl mx-auto">
                         {[
                             '/images/new_stock/129955334_3490638874338770_6000996615654609337_n.jpg',
                             '/images/new_stock/137505857_3579509675451689_2374564620046686557_n.jpg',
@@ -290,42 +356,31 @@ const Home = () => {
                             '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg',
                             '/images/new_stock/486516207_1481786956414930_2321442840945898864_n.jpg',
                             '/images/new_stock/489340488_1499820237944935_5490590416000557979_n.jpg',
-                            '/images/new_stock/490146123_1501538671106425_4044332027040543873_n.jpg',
-                            '/images/new_stock/490456663_1501533701106922_8497712990594332240_n.jpg',
-                            '/images/new_stock/549791277_1644733560120268_2404535269820118760_n.jpg',
-                            '/images/new_stock/554040759_1650146012912356_7711737919927358654_n.jpg',
-                            '/images/new_stock/557642269_1650142809579343_6070543851528674382_n.jpg',
-                            '/images/new_stock/613761809_1741390033787953_8802348971884052694_n.jpg'
                         ].map((src, i) => (
-                            <a
+                            <div
                                 key={i}
-                                href="https://www.instagram.com/thevillagebakerycafe/"
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 className="group relative aspect-square overflow-hidden rounded-xl bg-dark-800"
                             >
                                 <img
                                     src={src}
-                                    alt="Instagram post"
+                                    alt="Village Bakery"
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
-                                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <Sparkles className="text-gold-300 animate-pulse" size={24} />
-                                </div>
-                            </a>
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
                         ))}
                     </div>
 
-                    <div className="mt-12 text-center">
-                        <a
-                            href="https://www.instagram.com/thevillagebakerycafe/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-outline"
-                        >
-                            <span>Follow on Instagram</span>
-                            <ArrowRight size={18} />
-                        </a>
+                    {/* Goal Progress Bar */}
+                    <div className="mt-12 max-w-2xl mx-auto text-center">
+                        <p className="text-cream/80 font-body mb-4">Combined followers across all platforms</p>
+                        <div className="relative h-4 bg-dark-800 rounded-full overflow-hidden border border-gold-300/20">
+                            <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gold-300 to-gold-500 rounded-full animate-pulse"></div>
+                        </div>
+                        <div className="flex justify-between mt-2 text-sm">
+                            <span className="text-gold-300 font-bold">~12,000 followers</span>
+                            <span className="text-cream/60">Goal: 50,000</span>
+                        </div>
                     </div>
                 </div>
             </section>

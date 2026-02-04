@@ -101,19 +101,17 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`relative font - body text - sm font - medium tracking - wide transition - all duration - 300 group ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80 hover:text-cream'
-                  } `}
+                className={`relative font-body text-sm font-medium tracking-wide transition-all duration-300 group ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80 hover:text-cream'}`}
               >
                 {link.name}
-                <span className={`absolute - bottom - 1 left - 0 h - 0.5 bg - gradient - to - r from - gold - 300 to - gold - 600 transition - all duration - 300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                  } `}></span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-gold-300 to-gold-600 transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
             ))}
 
             {/* Opening Hours Badge */}
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-dark-800/60 backdrop-blur-sm border border-gold-300/20">
               <Clock size={14} className={isOpen ? 'text-green-400' : 'text-gold-300/60'} />
-              <span className={`text - xs font - body font - medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'} `}>
+              <span className={`text-xs font-body font-medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'}`}>
                 {statusText}
               </span>
             </div>
@@ -143,7 +141,7 @@ const Header = () => {
               {/* Opening Hours Badge - Mobile */}
               <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-dark-900/60 border border-gold-300/20">
                 <Clock size={16} className={isOpen ? 'text-green-400' : 'text-gold-300/60'} />
-                <span className={`text - sm font - body font - medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'} `}>
+                <span className={`text-sm font-body font-medium ${isOpen ? 'text-green-400' : 'text-gold-300/60'}`}>
                   {statusText}
                 </span>
               </div>
@@ -152,8 +150,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text - lg font - body font - medium py - 3 transition - colors duration - 300 ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80'
-                    } `}
+                  className={`text-lg font-body font-medium py-3 transition-colors duration-300 ${location.pathname === link.path ? 'text-gold-300' : 'text-cream/80'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
