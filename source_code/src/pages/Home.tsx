@@ -73,7 +73,7 @@ const Home = () => {
                         {[
                             { icon: Star, title: 'Premium Ingredients', desc: 'Locally sourced where possible, baked fresh every morning with love.' },
                             { icon: Timer, title: 'Quick Service', desc: 'Pre-order for lightning-fast pickup or relax in our welcoming cafe.' },
-                            { icon: Award, title: '5-Star Rated', desc: 'Beloved by locals for exceptional food and warm hospitality.' }
+                            { icon: Award, title: '5-Star Food Hygiene', desc: 'Top hygiene rating, beloved by locals on Google, Just Eat & Trustpilot.' }
                         ].map((item, i) => (
                             <div key={i} className={`card group animate-scale-in delay-${i * 100}`}>
                                 <div className="flex flex-col items-start gap-6">
