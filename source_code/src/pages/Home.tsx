@@ -36,12 +36,12 @@ const Home = () => {
                             </span>
                         </div>
 
-                        <h1 className="text-6xl md:text-8xl font-display font-bold leading-[1.1] animate-fade-in-up delay-100">
-                            <span className="block text-cream mb-4">Fresh Food</span>
+                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold leading-[1.1] animate-fade-in-up delay-100">
+                            <span className="block text-cream mb-2 sm:mb-4">Fresh Food</span>
                             <span className="block text-gold-gradient">Warm Welcome</span>
                         </h1>
 
-                        <p className="text-xl md:text-2xl text-cream/90 font-body max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                        <p className="text-base sm:text-xl md:text-2xl text-cream/90 font-body max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200 px-2">
                             From legendary breakfast challenges to showstopping cakes,
                             we pour passion into every plate at Purbrook's favorite bakery.
                         </p>
@@ -125,7 +125,7 @@ const Home = () => {
                                 <div className="h-0.5 w-20 bg-gradient-to-r from-gold-300 to-transparent mt-2"></div>
                             </div>
 
-                            <h2 className="text-5xl md:text-6xl font-display font-bold text-cream leading-tight">
+                            <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-cream leading-tight">
                                 Monthly Charity Challenges
                             </h2>
 
@@ -157,12 +157,49 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* News & Community Section */}
+            {/* Community Section - Group Photo */}
+            <section className="relative py-32 bg-dark-900 overflow-hidden">
+                <div className="container px-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-6 animate-fade-in-up">
+                            <div className="inline-block">
+                                <span className="text-gold-300 font-body font-bold tracking-widest uppercase text-sm">Our People</span>
+                                <div className="h-0.5 w-20 bg-gradient-to-r from-gold-300 to-transparent mt-2"></div>
+                            </div>
+                            <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-cream leading-tight">
+                                At the Heart of Purbrook
+                            </h2>
+                            <p className="text-xl text-cream/70 font-body leading-relaxed">
+                                More than just a bakery, we're a meeting place. From our morning regulars to the brave challenge seekers, the Village Bakery is where the community comes together.
+                            </p>
+                            <p className="text-lg text-cream/60 font-body leading-relaxed">
+                                Whether it's a quick coffee or a full family breakfast, you'll always find a warm welcome and a friendly face.
+                            </p>
+                            <div className="pt-6">
+                                <a href="https://www.facebook.com/thevillagebakerycafe" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                                    <span>Join Our Community</span>
+                                    <Facebook size={18} />
+                                </a>
+                            </div>
+                        </div>
+                        <div className="relative group p-4">
+                            <div className="absolute inset-0 bg-gold-300/10 rounded-3xl blur-3xl group-hover:bg-gold-300/20 transition-all duration-700"></div>
+                            <img
+                                src="/images/new_stock/490146123_1501538671106425_4044332027040543873_n.jpg"
+                                alt="The Village Bakery Community"
+                                className="relative rounded-2xl border border-gold-300/20 shadow-2xl group-hover:scale-[1.02] transition-transform duration-700"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* News & Updates Section */}
             <section className="relative py-24 bg-dark-800">
                 <div className="container px-6">
                     <div className="text-center mb-16 space-y-4">
                         <span className="text-gold-300 font-body font-bold tracking-widest uppercase text-sm">Latest News</span>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">Community Updates</h2>
+                        <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">Charity & Community</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -170,7 +207,7 @@ const Home = () => {
                         <div className="bg-dark-900 rounded-2xl p-8 border border-gold-300/10 hover:border-gold-300/30 transition-all group">
                             <div className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-bold uppercase tracking-wider">
                                 <Award size={14} />
-                                <span>Champion Crowned</span>
+                                <span>Challenge Update</span>
                             </div>
                             <h3 className="text-2xl font-display font-bold text-cream mb-4 group-hover:text-gold-300 transition-colors">We Have A Winner! 🏆</h3>
                             <p className="text-cream/70 font-body leading-relaxed mb-6">
@@ -186,14 +223,14 @@ const Home = () => {
                         <div className="bg-dark-900 rounded-2xl p-8 border border-gold-300/10 hover:border-gold-300/30 transition-all group">
                             <div className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-bold uppercase tracking-wider">
                                 <Sparkles size={14} />
-                                <span>Community</span>
+                                <span>Charity Focus</span>
                             </div>
                             <h3 className="text-2xl font-display font-bold text-cream mb-4 group-hover:text-gold-300 transition-colors">Free Breakfast for Kids ❤️</h3>
                             <p className="text-cream/70 font-body leading-relaxed mb-6">
                                 At the Village Bakery, we feel no child should start the day hungry. If you know a child or family that may be struggling right now, we’re offering free breakfast for kids - no questions asked, no judgment, just breakfast in a safe, welcoming space.
                             </p>
                             <p className="text-sm text-cream/60 italic">
-                                Please share this so it reaches the families who need it most. Sometimes a simple breakfast can make a big difference 🥣 🍞
+                                Please share this so it reaches the families who need it most. Helping our community is what we do best 🥣 🍞
                             </p>
                         </div>
                     </div>
@@ -209,15 +246,15 @@ const Home = () => {
                         <p className="text-cream/60 font-body max-w-2xl mx-auto">Every item is prepared with care, using the finest ingredients.</p>
                     </div>
 
-                    {/* Premium Masonry-style Gallery - ONLY VERIFIED WORKING IMAGES */}
+                    {/* Premium Masonry-style Gallery - VERIFIED ACCURATE LABELS */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                         {[
-                            { src: '/images/new_stock/129955334_3490638874338770_6000996615654609337_n.jpg', alt: 'Fresh Cakes', title: 'Signature Cakes', desc: 'Layered perfection' },
-                            { src: '/images/new_stock/137505857_3579509675451689_2374564620046686557_n.jpg', alt: 'Fresh Sandwiches', title: 'Fresh Sandwiches', desc: 'Made to order' },
-                            { src: '/images/new_stock/486516207_1481786956414930_2321442840945898864_n.jpg', alt: 'Fresh Baked Goods', title: 'Daily Specials', desc: 'Always something new' },
-                            { src: '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg', alt: 'Fresh Baguettes', title: 'Freshly Baked Bread', desc: 'Crispy baguettes & rolls' },
-                            { src: '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg', alt: 'Buffet Platters', title: 'Event Catering', desc: 'Bespoke trays for any occasion', link: '/buffets' },
-                            { src: '/images/new_stock/489340488_1499820237944935_5490590416000557979_n.jpg', alt: 'Breakfast Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
+                            { src: '/images/new_stock/129955334_3490638874338770_6000996615654609337_n.jpg', alt: 'Full English Breakfast', title: 'Big Breakfasts', desc: 'The heart of Purbrook' },
+                            { src: '/images/new_stock/489340488_1499820237944935_5490590416000557979_n.jpg', alt: 'Chocolate Swiss Roll', title: 'Sweet Treats', desc: 'Perfect with coffee' },
+                            { src: '/images/new_stock/554040759_1650146012912356_7711737919927358654_n.jpg', alt: 'Toasted Ham & Cheese Panini', title: 'Toasties & Paninis', desc: 'Hot and delicious' },
+                            { src: '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg', alt: 'Sausage Baguette', title: 'Hot Baps & Rolls', desc: 'Grab and go' },
+                            { src: '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg', alt: 'Full English Breakfast', title: 'Cooked Fresh', desc: 'Made to order' },
+                            { src: '/images/new_stock/557642269_1650142809579343_6070543851528674382_n.jpg', alt: 'The Baguette Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
                         ].map((item, i) => (
                             <div
                                 key={i}
@@ -234,7 +271,6 @@ const Home = () => {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
                                 </div>
-
                                 {/* Content Overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                     <h3 className="text-xl font-display font-bold text-cream mb-1">{item.title}</h3>
@@ -248,11 +284,6 @@ const Home = () => {
                                             <ArrowRight size={14} />
                                         </Link>
                                     )}
-                                </div>
-
-                                {/* Shine effect on hover */}
-                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                                 </div>
                             </div>
                         ))}
@@ -269,7 +300,7 @@ const Home = () => {
                 <div className="container px-6 relative">
                     <div className="text-center mb-16 space-y-4">
                         <span className="text-gold-300 font-body font-bold tracking-widest uppercase text-sm">Join Our Community</span>
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-cream">Help Us Reach 50,000 Followers!</h2>
+                        <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-cream">Help Us Reach 50,000 Followers!</h2>
                         <p className="text-cream/60 font-body max-w-2xl mx-auto">
                             We're building something special here in Purbrook. Follow us for daily specials, challenge attempts, behind-the-scenes baking, and community stories.
                         </p>
@@ -348,7 +379,7 @@ const Home = () => {
                     </div>
 
                     {/* Photo Grid Preview */}
-                    <div className="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-6 gap-3 max-w-5xl mx-auto">
                         {[
                             '/images/new_stock/129955334_3490638874338770_6000996615654609337_n.jpg',
                             '/images/new_stock/137505857_3579509675451689_2374564620046686557_n.jpg',
