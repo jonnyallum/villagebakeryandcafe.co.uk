@@ -108,12 +108,36 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Copyright */}
-                <div className="relative pt-10 border-t border-gold-300/10">
+                {/* Copyright & Neural Registry */}
+                <div className="relative pt-10 border-t border-gold-300/10 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-300/20 to-transparent"></div>
-                    <p className="text-center text-xs text-cream/40 font-body">
-                        &copy; {new Date().getFullYear()} The Village Bakery & Cafe. Crafted with passion in Purbrook.
-                    </p>
+
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                        <p className="text-xs text-cream/40 font-body uppercase tracking-widest mb-1">
+                            &copy; {new Date().getFullYear()} The Village Bakery & Cafe
+                        </p>
+                        <p className="text-[10px] text-gold-300/30 font-black uppercase tracking-[0.2em]">
+                            Purbrook // Neural Node_02
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-gold-300/40 text-[10px] font-black uppercase tracking-[0.3em]">Neural Build Registry</span>
+                        <div className="flex gap-4 text-[9px] font-bold text-cream/30 uppercase tracking-tighter">
+                            <span className="hover:text-gold-300 transition-colors">@Conductor</span>
+                            <span className="hover:text-gold-300 transition-colors">@JonnyAI</span>
+                            <span className="hover:text-gold-300 transition-colors">@Pixel</span>
+                            <span className="hover:text-gold-300 transition-colors">@Sentinel</span>
+                            <span className="hover:text-gold-300 transition-colors">@Watcher</span>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col items-center md:items-end">
+                        <span className="text-[10px] font-black text-cream/20 tracking-[0.4em] uppercase mb-1">Built By</span>
+                        <span className="text-lg font-display font-bold text-cream">
+                            Jonny<span className="text-gold-300">Ai</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </footer>
