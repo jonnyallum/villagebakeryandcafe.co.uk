@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Bakery Menu - Back</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #f5f5dc;
+            width: 210mm;
+            height: 297mm;
+            padding: 15mm;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Pattern */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 175, 55, 0.02) 35px, rgba(212, 175, 55, 0.02) 70px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #d4af37;
+            position: relative;
+        }
+
+        .header::after {
+            content: '🥡';
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            padding: 0 15px;
+            font-size: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #d4af37;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Takeaway Banner */
+        .takeaway-banner {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 2px solid #d4af37;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .takeaway-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .takeaway-banner p {
+            font-size: 14px;
+            color: rgba(245, 245, 220, 0.9);
+            line-height: 1.6;
+        }
+
+        .takeaway-banner .phone {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Content Grid */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            flex: 1;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Fillings Grid */
+        .fillings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .filling-item {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 6px;
+            padding: 8px 10px;
+            font-size: 12px;
+            color: rgba(245, 245, 220, 0.9);
+            text-align: center;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 3px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .info-box h3 {
+            font-size: 16px;
+            color: #d4af37;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .info-box p {
+            font-size: 12px;
+            color: rgba(245, 245, 220, 0.8);
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 8px;
+        }
+
+        .info-box li {
+            font-size: 11px;
+            color: rgba(245, 245, 220, 0.7);
+            padding: 4px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .info-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: 700;
+        }
+
+        /* Social Section */
+        .social-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.03) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #d4af37;
+            margin-bottom: 12px;
+        }
+
+        .social-section p {
+            font-size: 13px;
+            color: rgba(245, 245, 220, 0.8);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            font-size: 32px;
+        }
+
+        .follower-count {
+            font-size: 28px;
+            font-weight: 700;
+            color: #d4af37;
+            margin: 15px 0 5px;
+        }
+
+        .follower-label {
+            font-size: 11px;
+            color: rgba(245, 245, 220, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .footer p {
+            font-size: 10px;
+            color: rgba(245, 245, 220, 0.5);
+            margin-bottom: 5px;
+        }
+
+        .footer .hours {
+            font-size: 12px;
+            color: #d4af37;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="logo">Takeaway Menu</h1>
+            <p class="tagline">All Your Favourites To Go</p>
+        </div>
+
+        <!-- Takeaway Banner -->
+        <div class="takeaway-banner">
+            <h2>🥡 Order Ahead</h2>
+            <p>Call us to place your order and we'll have it ready for quick pickup!</p>
+            <p class="phone">📞 07840 803555</p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content">
+            <!-- Column 1 -->
+            <div>
+                <!-- Takeaway Breakfast -->
+                <div class="section">
+                    <h2 class="section-title">🍳 Takeaway Breakfast</h2>
+
+                    <div class="info-box">
+                        <h3>Breakfast Boxes</h3>
+                        <p><strong>Purbrook Porker - In A Box</strong> — £8.95</p>
+                        <p style="font-size: 10px; margin-bottom: 12px;">Saute potatoes or hash browns, 2 eggs, 3
+                            sausages, 3 bacon, mushrooms, tomatoes, beans. Served with toast.</p>
+
+                        <p><strong>Full English - In A Box</strong> — £5.95</p>
+                        <p style="font-size: 10px;">Saute potatoes or hash brown, 1 egg, 2 sausages, 2 bacon, beans.
+                            Served with toast.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Breakfast Muffins</h3>
+                        <p>All £4.00 each</p>
+                        <ul>
+                            <li>Bacon and Egg</li>
+                            <li>Sausage and Egg</li>
+                            <li>Veggie Sausage & Egg</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Build Your Own (Takeaway)</h3>
+                        <p style="margin-bottom: 8px;">Bap / Baguette / Door Stop / Crusty Roll / Plait</p>
+                        <p style="font-size: 11px; margin-bottom: 4px;">1 Filling — <strong>£4.50</strong></p>
+                        <p style="font-size: 11px; margin-bottom: 4px;">2 Fillings — <strong>£5.00</strong></p>
+                        <p style="font-size: 11px; margin-bottom: 4px;">3 Fillings — <strong>£5.50</strong></p>
+                        <p style="font-size: 11px; margin-bottom: 4px;">4 Fillings — <strong>£6.00</strong></p>
+                        <p style="font-size: 11px;">5 Fillings — <strong>£6.50</strong></p>
+                    </div>
+                </div>
+
+                <!-- Sandwich Fillings -->
+                <div class="section">
+                    <h2 class="section-title">🥪 Sandwich Fillings</h2>
+
+                    <div class="fillings-grid">
+                        <div class="filling-item">Cheese</div>
+                        <div class="filling-item">Ham</div>
+                        <div class="filling-item">Tuna Mayo</div>
+                        <div class="filling-item">Egg Mayo</div>
+                        <div class="filling-item">Chicken Tikka</div>
+                        <div class="filling-item">Roast Chicken</div>
+                        <div class="filling-item">Corned Beef</div>
+                        <div class="filling-item">Coronation Chicken</div>
+                        <div class="filling-item">Chicken & Mayo</div>
+                        <div class="filling-item">Chicken & Bacon Mayo</div>
+                        <div class="filling-item">Seafood</div>
+                        <div class="filling-item">Chilli Con Carne</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div>
+                <!-- Takeaway Lunch -->
+                <div class="section">
+                    <h2 class="section-title">🍽️ Takeaway Lunch</h2>
+
+                    <div class="info-box">
+                        <h3>Hot Meals</h3>
+                        <p><strong>Jacket Potato</strong> — £5.50 (1 filling), £6.50 (2 fillings)</p>
+                        <p style="font-size: 10px; margin-bottom: 10px;">Chilli Con Carne £6.50 | Sea Food £8.00</p>
+
+                        <p><strong>Chicken Curry</strong> — £7.50</p>
+                        <p style="font-size: 10px; margin-bottom: 10px;">Slow cooked chicken curry served with basmati
+                            rice.</p>
+
+                        <p><strong>Chilli Con Carne</strong> — £7.50</p>
+                        <p style="font-size: 10px; margin-bottom: 10px;">Slow cooked chilli con carne served with
+                            basmati rice.</p>
+
+                        <p><strong>House Club Sandwich</strong> — £7.50</p>
+                        <p style="font-size: 10px;">Filled with chicken, bacon, mayo, lettuce & tomato. Served with
+                            chips.</p>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-section">
+                    <h3>Follow Our Journey</h3>
+                    <p>Join our growing community and see what's cooking!</p>
+
+                    <div class="follower-count">~46,000</div>
+                    <div class="follower-label">Combined Followers</div>
+
+                    <div class="social-icons">
+                        <span class="social-icon">📘</span>
+                        <span class="social-icon">📷</span>
+                        <span class="social-icon">🎵</span>
+                    </div>
+
+                    <p style="margin-top: 15px; font-size: 12px;">
+                        <strong>@villagebakeryandcafe</strong>
+                    </p>
+                </div>
+
+                <!-- About Us -->
+                <div class="info-box">
+                    <h3>About Us</h3>
+                    <p>Since 2014, we've been Purbrook's favourite spot for fresh food and warm welcomes. From legendary
+                        breakfast challenges to showstopping cakes, we pour passion into every plate.</p>
+                    <p style="margin-top: 10px;"><strong>Monthly Charity Challenges</strong> — We're proud to support
+                        local causes through our famous food challenges!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="hours">⏰ Mon-Sat: 7:00 AM - 3:00 PM | Sunday: 8:00 AM - 2:00 PM</p>
+            <p>📍 Purbrook, Waterlooville | 📞 07840 803555</p>
+            <p>Please inform our staff of any allergies or dietary requirements before ordering.</p>
+            <p style="margin-top: 8px; font-size: 9px;">Prices subject to change. V - Vegetarian options available.</p>
+        </div>
+    </div>
+</body>
+
+</html>

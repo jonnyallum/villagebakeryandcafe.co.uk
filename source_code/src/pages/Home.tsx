@@ -1,4 +1,4 @@
-import { ArrowRight, Star, Sparkles, Award, Timer, Facebook, Video, MapPin } from 'lucide-react';
+import { ArrowRight, photos Star, Sparkles, Award, Timer, Facebook, Video, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import InstagramEmbed from '../components/InstagramEmbed';
 
@@ -245,7 +245,7 @@ const Home = () => {
                             { src: '/images/new_stock/554040759_1650146012912356_7711737919927358654_n.jpg', alt: 'Toasted Ham & Cheese Panini', title: 'Toasties & Paninis', desc: 'Hot and delicious' },
                             { src: '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg', alt: 'Sausage Baguette', title: 'Hot Baps & Rolls', desc: 'Grab and go' },
                             { src: '/images/new_stock/627973303_1766482047945418_3832132572367835134_n.jpg', alt: 'Breakfast Burger', title: 'Breakfast Burger', desc: 'Our newest creation' },
-                            { src: '/images/new_stock/557642269_1650142809579343_6070543851528674382_n.jpg', alt: 'The Baguette Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
+                            { src: '/images/new_stock/557642269_1650142809579343_6070543851528674382_n.jpg', alt: 'Breakfast Plaits', title: 'Breakfast Plaits', desc: 'Freshly baked daily', link: '/menu' },
                         ].map((item, i) => (
                             <div
                                 key={i}
