@@ -54,17 +54,17 @@ const Buffets = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {[
                             {
-                                img: '/images/buffet-sandwiches.jpg',
+                                img: '/images/stock-sandwich-platter-1.jpg',
                                 title: 'Sandwich Platters',
                                 desc: 'Freshly made with premium fillings: ham, cheese, tuna mayo, chicken mayo, egg mayo. White or brown bread, cut to perfection.'
                             },
                             {
-                                img: '/images/buffet-header.jpg',
+                                img: '/images/stock-sandwich-platter-2.jpg',
                                 title: 'Cake Platters',
                                 desc: 'Our fresh cakes and traybakes. Brownies, flapjacks, sponges - the perfect sweet addition to any event.'
                             },
                             {
-                                img: '/images/buffets-hero-new.jpg',
+                                img: '/images/stock-sandwich-platter-3.jpg',
                                 title: 'Mixed Platters',
                                 desc: 'Can\'t decide? We create beautiful mixed trays combining our savory sandwiches with sweet treats.'
                             }

@@ -5,7 +5,7 @@ const Menu = () => {
                 <div className="container text-center">
                     <span className="text-gold-300 font-bold tracking-widest uppercase text-sm mb-2 block">Dine In or Takeaway</span>
                     <h1 className="text-4xl md:text-5xl font-display font-bold text-cream mb-4">Our Menu</h1>
-                    <p className="text-cream/70 max-w-2xl mx-auto">Freshly cooked breakfasts, hearty lunches, and delicious snacks.</p>
+                    <p className="text-cream/70 max-w-2xl mx-auto">Freshly cooked breakfasts, hearty lunches, burgers, and more. All available for dine-in or takeaway.</p>
                 </div>
             </section>
 
@@ -16,23 +16,22 @@ const Menu = () => {
                     <div className="flex flex-col gap-16">
                         {/* Breakfast Section */}
                         <section>
-                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">Big Breakfasts</h2>
+                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">🍳 Breakfast (Dine-In)</h2>
                             <div className="flex flex-col gap-8">
-                                {/* Standard items could be here if I had them, adding the "missing" ones + generic */}
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Village Big Breakfast</h3>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Purbrook Porker</h3>
                                         <span className="font-bold text-cream">£8.95</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">2 Sausages, 2 Bacon, 2 Eggs, Beans, Mushrooms, Tomatoes, 2 Hash Browns, Black Pudding & Toast.</p>
+                                    <p className="text-cream/70 text-sm">Full works with 2 Eggs, 3 Sausages, 3 Bacon, and all the trimmings.</p>
                                 </div>
 
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Purbrook Porker</h3>
-                                        <span className="font-bold text-cream">£6.95</span>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Full English</h3>
+                                        <span className="font-bold text-cream">£5.95</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">3 Sausages, 3 Bacon, Egg, Beans, Chips or Hash Browns, Toast or Bread & Butter.</p>
+                                    <p className="text-cream/70 text-sm">Our standard breakfast — the classic done right.</p>
                                 </div>
 
                                 <div className="group">
@@ -40,7 +39,7 @@ const Menu = () => {
                                         <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Veggie Breakfast</h3>
                                         <span className="font-bold text-cream">£5.95</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">2 Hash Browns, 2 Poached Eggs, Beans, Mushrooms, Tomatoes. Served with Toast.</p>
+                                    <p className="text-cream/70 text-sm">Hash Browns, Poached Eggs, Beans, Mushrooms, Tomatoes & Toast. Add veggie sausage 80p.</p>
                                 </div>
 
                                 <div className="group">
@@ -48,27 +47,61 @@ const Menu = () => {
                                         <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Lite Breakfast</h3>
                                         <span className="font-bold text-cream">£4.95</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Sauté Potatoes or Hash Brown, Egg, Sausage, Bacon, Beans. Served with Toast.</p>
+                                    <p className="text-cream/70 text-sm">A lighter start — Egg, Sausage, Bacon, Beans & Toast.</p>
+                                </div>
+
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Large Breakfast Bap/Baguette</h3>
+                                        <span className="font-bold text-cream">£5.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Bacon, Egg & Sausage in a fresh roll or baguette.</p>
+                                </div>
+
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">BLT Bap/Baguette</h3>
+                                        <span className="font-bold text-cream">£4.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Classic Bacon, Lettuce, Tomato & Mayo.</p>
+                                </div>
+
+                                <div className="group pt-4">
+                                    <h3 className="text-lg font-bold text-cream mb-4">Build Your Own</h3>
+                                    <p className="text-cream/70 text-sm mb-4">Choose from Bap, Baguette, Door Stop, Crusty Roll, or Plait.</p>
+                                    <div className="space-y-2 text-sm">
+                                        <div className="flex justify-between border-b border-white/5 pb-2">
+                                            <span className="text-zinc-300">1 Filling</span>
+                                            <span className="text-gold-300 font-bold">£4.00</span>
+                                        </div>
+                                        <div className="flex justify-between border-b border-white/5 pb-2">
+                                            <span className="text-zinc-300">2-3 Fillings</span>
+                                            <span className="text-gold-300 font-bold">£4.50–£5.00</span>
+                                        </div>
+                                        <div className="flex justify-between border-b border-white/5 pb-2">
+                                            <span className="text-zinc-300">5 Fillings (The Stack)</span>
+                                            <span className="text-gold-300 font-bold">£6.00</span>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div className="bg-dark-800 p-6 rounded-xl border border-white/5 mt-4">
-                                    <h4 className="text-gold-300 font-bold mb-2">Customize Your Breakfast</h4>
-                                    <p className="text-cream/70 text-sm mb-2">Add Extra Items for <span className="text-cream font-bold">£0.80</span> each.</p>
-                                    <p className="text-xs text-zinc-500">Black Pudding, Hash Brown, Egg, Sausage, Bacon, Beans, Mushrooms, Tomatoes, Toast, Fried Bread.</p>
+                                    <h4 className="text-gold-300 font-bold mb-2">All Extra Items</h4>
+                                    <p className="text-cream/70 text-sm">Add extras for <span className="text-cream font-bold">80p</span> each — Black Pudding, Hash Brown, Egg, Sausage, Bacon, Beans, Mushrooms, Tomatoes, Toast.</p>
                                 </div>
                             </div>
                         </section>
 
                         {/* Light Bites */}
                         <section>
-                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">Light Bites</h2>
+                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">🥪 Light Bites</h2>
                             <div className="flex flex-col gap-6">
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
                                         <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Plain Omelette</h3>
-                                        <span className="font-bold text-cream">£3.00</span>
+                                        <span className="font-bold text-cream">£5.00</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Served with a Side Salad. Add fillings for £0.80 (Cheese, Ham, Tomato, Bacon, Sausage, Mushroom).</p>
+                                    <p className="text-cream/70 text-sm">Add fillings for 80p each (Cheese, Ham, Tomato, Bacon, Sausage, Mushroom).</p>
                                 </div>
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
@@ -89,7 +122,7 @@ const Menu = () => {
                                         <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Breakfast Muffins</h3>
                                         <span className="font-bold text-cream">£4.00</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Bacon & Egg, Sausage & Egg, or Veggie Sausage & Egg.</p>
+                                    <p className="text-cream/70 text-sm">Bacon & Egg, Sausage & Egg, or Veggie Sausage & Egg. Add extra 80p.</p>
                                 </div>
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
@@ -100,88 +133,208 @@ const Menu = () => {
                                 </div>
                             </div>
                         </section>
+
+                        {/* Mega Breakfast */}
+                        <section>
+                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">🍔 Mega Breakfast (The Challenge!)</h2>
+                            <div className="flex flex-col gap-6">
+                                <div className="group bg-gradient-to-r from-gold-300/5 to-transparent p-6 rounded-xl border border-gold-300/20">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Mega Breakfast</h3>
+                                        <span className="font-bold text-cream text-xl">£15.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">4 Eggs, 5 Sausages, 3 Bacon, 3 Hash Browns, and much more! Are you brave enough?</p>
+                                </div>
+                            </div>
+                        </section>
                     </div>
 
                     {/* Column 2 */}
                     <div className="flex flex-col gap-16">
-                        {/* Baps & Rolls */}
+                        {/* Lunch */}
                         <section>
-                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">Baps, Baguettes & Rolls</h2>
+                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">🍽️ Lunch</h2>
                             <div className="flex flex-col gap-6">
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Large Breakfast Bap</h3>
-                                        <span className="font-bold text-cream">£5.00</span>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Panini</h3>
+                                        <span className="font-bold text-cream">£5.50</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Bacon, Egg, and Sausage in a fresh roll or baguette.</p>
+                                    <p className="text-cream/70 text-sm">Served with salad.</p>
                                 </div>
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">BLT</h3>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Toastie</h3>
                                         <span className="font-bold text-cream">£4.00</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Classic Bacon, Lettuce, Tomato & Mayo.</p>
+                                    <p className="text-cream/70 text-sm">Served with salad.</p>
                                 </div>
-
-                                <div className="group pt-4">
-                                    <h3 className="text-lg font-bold text-cream mb-4">Build Your Own</h3>
-                                    <p className="text-cream/70 text-sm mb-4">Choose from Bap, Baguette, Door Stop, Crusty Roll, or Plait.</p>
-
-                                    <div className="space-y-2 text-sm">
-                                        <div className="flex justify-between border-b border-white/5 pb-2">
-                                            <span className="text-zinc-300">1 Filling</span>
-                                            <span className="text-gold-300 font-bold">£4.00</span>
-                                        </div>
-                                        <div className="flex justify-between border-b border-white/5 pb-2">
-                                            <span className="text-zinc-300">2 Fillings</span>
-                                            <span className="text-gold-300 font-bold">£4.50</span>
-                                        </div>
-                                        <div className="flex justify-between border-b border-white/5 pb-2">
-                                            <span className="text-zinc-300">3 Fillings</span>
-                                            <span className="text-gold-300 font-bold">£5.00</span>
-                                        </div>
-                                        <div className="flex justify-between border-b border-white/5 pb-2">
-                                            <span className="text-zinc-300">The Challenge Stack (5 Fillings)</span>
-                                            <span className="text-gold-300 font-bold">£6.00</span>
-                                        </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Sandwich</h3>
+                                        <span className="font-bold text-cream">£3.00</span>
                                     </div>
-                                    <p className="text-xs text-zinc-500 mt-4">Filling Options: Bacon, Sausage, Egg, Mushroom, Hash Brown, Black Pudding, Veggie Sausage.</p>
+                                    <p className="text-cream/70 text-sm">Ham, Cheese, Tuna Mayo, Chicken Mayo, Egg Mayo. White or Brown.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Baguettes / Baps</h3>
+                                        <span className="font-bold text-cream">£4.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Your choice of fillings in a fresh baguette or bap.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">House Club Sandwich</h3>
+                                        <span className="font-bold text-cream">£6.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Served with chips.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">House Special Salad</h3>
+                                        <span className="font-bold text-cream">£4.95</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Fresh and filling.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Ham, Egg & Chips</h3>
+                                        <span className="font-bold text-cream">£6.95</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">A proper classic.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Soup</h3>
+                                        <span className="font-bold text-cream">£3.50</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Homemade soup of the day.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Chilli Con Carne</h3>
+                                        <span className="font-bold text-cream">£7.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Served with rice or chips.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Chicken Curry</h3>
+                                        <span className="font-bold text-cream">£7.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Homemade with rice or chips.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Jacket Potato</h3>
+                                        <span className="font-bold text-cream">£5.00–£8.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Price depends on fillings.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Mixed Grill</h3>
+                                        <span className="font-bold text-cream">£12.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">The ultimate meat feast.</p>
                                 </div>
                             </div>
                         </section>
 
-                        {/* Lunch */}
+                        {/* Burgers */}
                         <section>
-                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">Lunch & Snacks</h2>
+                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">🍔 Burgers</h2>
                             <div className="flex flex-col gap-6">
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Freshly Made Sandwiches</h3>
-                                        <span className="font-bold text-cream">from £3.50</span>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Burger</h3>
+                                        <span className="font-bold text-cream">£4.50</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Ham, Cheese, Tuna Mayo, Chicken Mayo, Egg Mayo. Served on White or Brown.</p>
+                                    <p className="text-cream/70 text-sm">Classic beef burger.</p>
                                 </div>
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Paninis & Toasties</h3>
-                                        <span className="font-bold text-cream">from £4.50</span>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Cheese Burger</h3>
+                                        <span className="font-bold text-cream">£5.00</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Toasted to perfection with your choice of fillings.</p>
+                                    <p className="text-cream/70 text-sm">With melted cheese.</p>
                                 </div>
                                 <div className="group">
                                     <div className="flex justify-between items-baseline mb-2">
-                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Fresh Cakes</h3>
-                                        <span className="font-bold text-cream">Ask at counter</span>
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Bacon Burger</h3>
+                                        <span className="font-bold text-cream">£6.00</span>
                                     </div>
-                                    <p className="text-cream/70 text-sm">Selection changes daily. Brownies, Flapjacks, Sponges.</p>
+                                    <p className="text-cream/70 text-sm">Topped with crispy bacon.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Egg Burger</h3>
+                                        <span className="font-bold text-cream">£5.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">With a fried egg.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Chicken Burger</h3>
+                                        <span className="font-bold text-cream">£5.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Crispy chicken fillet.</p>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Texas Burger</h3>
+                                        <span className="font-bold text-cream">£6.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Cheese, onion rings & BBQ sauce.</p>
+                                </div>
+                                <div className="group bg-gradient-to-r from-gold-300/5 to-transparent p-4 rounded-xl border border-gold-300/20">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Porkey Burger</h3>
+                                        <span className="font-bold text-cream">£7.00</span>
+                                    </div>
+                                    <p className="text-cream/70 text-sm">Bacon, sausage, egg & hash brown. The big one.</p>
+                                </div>
+                                <p className="text-cream/50 text-sm">Extra toppings 80p each.</p>
+                            </div>
+                        </section>
+
+                        {/* Sides */}
+                        <section>
+                            <h2 className="text-2xl font-display font-bold text-cream mb-8 border-b border-accent/20 pb-4 inline-block pr-12">🍟 Sides</h2>
+                            <div className="flex flex-col gap-6">
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Chips</h3>
+                                        <span className="font-bold text-cream">£3.00</span>
+                                    </div>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Cheesy Chips</h3>
+                                        <span className="font-bold text-cream">£3.95</span>
+                                    </div>
+                                </div>
+                                <div className="group">
+                                    <div className="flex justify-between items-baseline mb-2">
+                                        <h3 className="text-lg font-bold text-gold-300 group-hover:text-cream transition-colors">Cheesy Chips with Bacon Bits</h3>
+                                        <span className="font-bold text-cream">£4.95</span>
+                                    </div>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </div>
 
+                {/* Takeaway Note */}
+                <div className="mt-12 bg-dark-800 p-8 rounded-2xl border border-gold-300/10 text-center max-w-3xl mx-auto">
+                    <h3 className="text-xl font-display font-bold text-gold-300 mb-3">🥡 Takeaway Available</h3>
+                    <p className="text-cream/70 text-sm">All breakfast and lunch items available for takeaway. Call ahead for quick pickup!</p>
+                    <a href="tel:07840803555" className="inline-block mt-4 text-gold-300 font-bold hover:text-cream transition-colors">📞 07840 803555</a>
+                </div>
+
                 {/* Footer Note */}
-                <div className="mt-16 text-center text-zinc-500 text-sm">
+                <div className="mt-8 text-center text-zinc-500 text-sm">
                     <p>Please inform our staff of any allergies or dietary requirements before ordering.</p>
                     <p>Prices subject to change. V - Vegetarian options available.</p>
                 </div>

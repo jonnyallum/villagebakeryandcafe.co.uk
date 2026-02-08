@@ -5,61 +5,52 @@ import InstagramEmbed from '../components/InstagramEmbed';
 const Home = () => {
     return (
         <div className="flex flex-col overflow-hidden">
-            {/* Hero Section - Using Beautiful Food Photo */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                {/* Dynamic Shopfront Background with Logo Overlay */}
+            {/* Hero Section - Food-Forward Mobile-First */}
+            <section className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
+                {/* Full English Breakfast Background */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/hero-bakery-new.jpg"
-                        alt="Village Bakery Fresh Bakes"
-                        className="w-full h-full object-cover scale-105"
+                        src="/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg"
+                        alt="Village Bakery Full English Breakfast"
+                        className="w-full h-full object-cover object-center"
                     />
-                    {/* Atmospheric Logo Watermark */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none overflow-hidden">
-                        <img
-                            src="/images/logo.png"
-                            alt=""
-                            className="w-[120%] max-w-none md:w-[80%] md:max-w-4xl object-contain invert brightness-0"
-                        />
-                    </div>
-                    {/* Dark overlay for text readability - Adjusted for black background */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-dark-900/80 via-dark-900/70 to-dark-900"></div>
+                    {/* Rich dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark-900"></div>
                 </div>
 
                 {/* Content */}
-                <div className="container relative z-10 text-center px-6 pt-32 pb-20">
-                    <div className="max-w-5xl mx-auto space-y-8">
-                        <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-olive-300/10 backdrop-blur-sm border border-olive-300/20 animate-fade-in">
-                            <Sparkles size={16} className="text-olive-300" />
-                            <span className="text-olive-300 tracking-[0.2em] font-body font-medium text-sm uppercase">
-                                Serving Daily Since 2014
+                <div className="container relative z-10 text-center px-4 sm:px-6 pt-24 pb-16 sm:pt-32 sm:pb-20">
+                    <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-gold-300/10 backdrop-blur-sm border border-gold-300/20 animate-fade-in">
+                            <Sparkles size={14} className="text-gold-300" />
+                            <span className="text-gold-300 tracking-[0.15em] sm:tracking-[0.2em] font-body font-medium text-xs sm:text-sm uppercase">
+                                Purbrook's Favourite Since 2014
                             </span>
                         </div>
 
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold leading-[1.1] animate-fade-in-up delay-100">
-                            <span className="block text-cream mb-2 sm:mb-4">Fresh Food</span>
-                            <span className="block text-gold-gradient">Warm Welcome</span>
+                        <h1 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold leading-[1.1] animate-fade-in-up delay-100">
+                            <span className="block text-cream mb-1 sm:mb-3">Fresh Food.</span>
+                            <span className="block text-gold-gradient">Warm Welcome.</span>
                         </h1>
 
-                        <p className="text-base sm:text-xl md:text-2xl text-cream/90 font-body max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200 px-2">
-                            From legendary breakfast challenges to showstopping cakes,
-                            we pour passion into every plate at Purbrook's favorite bakery.
+                        <p className="text-sm sm:text-lg md:text-xl text-cream/85 font-body max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                            Legendary breakfasts, showstopping cakes, and monthly charity challenges — all made with love in Purbrook.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6 animate-fade-in-up delay-300">
-                            <Link to="/menu" className="btn btn-primary text-lg">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-4 sm:pt-6 animate-fade-in-up delay-300">
+                            <Link to="/menu" className="btn btn-primary text-base sm:text-lg">
                                 <span className="relative z-10">Explore Our Menu</span>
-                                <ArrowRight className="relative z-10" size={20} />
+                                <ArrowRight className="relative z-10" size={18} />
                             </Link>
-                            <Link to="/buffets" className="btn btn-outline text-lg">
+                            <Link to="/buffets" className="btn btn-outline text-base sm:text-lg">
                                 <span>Catering Services</span>
                             </Link>
                         </div>
                     </div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-float">
+                {/* Scroll Indicator - Hidden on mobile */}
+                <div className="hidden sm:block absolute bottom-12 left-1/2 -translate-x-1/2 animate-float">
                     <div className="w-6 h-10 border-2 border-gold-300/30 rounded-full flex justify-center pt-2">
                         <div className="w-1.5 h-3 bg-gold-300 rounded-full animate-pulse"></div>
                     </div>
@@ -253,7 +244,7 @@ const Home = () => {
                             { src: '/images/new_stock/489340488_1499820237944935_5490590416000557979_n.jpg', alt: 'Chocolate Swiss Roll', title: 'Sweet Treats', desc: 'Perfect with coffee' },
                             { src: '/images/new_stock/554040759_1650146012912356_7711737919927358654_n.jpg', alt: 'Toasted Ham & Cheese Panini', title: 'Toasties & Paninis', desc: 'Hot and delicious' },
                             { src: '/images/new_stock/475682389_9023612191041383_471844509600715094_n.jpg', alt: 'Sausage Baguette', title: 'Hot Baps & Rolls', desc: 'Grab and go' },
-                            { src: '/images/new_stock/486000734_1481786989748260_3307925956475930799_n.jpg', alt: 'Full English Breakfast', title: 'Cooked Fresh', desc: 'Made to order' },
+                            { src: '/images/new_stock/627973303_1766482047945418_3832132572367835134_n.jpg', alt: 'Breakfast Burger', title: 'Breakfast Burger', desc: 'Our newest creation' },
                             { src: '/images/new_stock/557642269_1650142809579343_6070543851528674382_n.jpg', alt: 'The Baguette Challenge', title: 'The Challenge', desc: 'Are you brave enough?', link: '/menu' },
                         ].map((item, i) => (
                             <div
@@ -406,10 +397,10 @@ const Home = () => {
                     <div className="mt-12 max-w-2xl mx-auto text-center">
                         <p className="text-cream/80 font-body mb-4">Combined followers across all platforms</p>
                         <div className="relative h-4 bg-dark-800 rounded-full overflow-hidden border border-gold-300/20">
-                            <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gold-300 to-gold-500 rounded-full animate-pulse"></div>
+                            <div className="absolute inset-y-0 left-0 w-[92%] bg-gradient-to-r from-gold-300 to-gold-500 rounded-full animate-pulse"></div>
                         </div>
                         <div className="flex justify-between mt-2 text-sm">
-                            <span className="text-gold-300 font-bold">~12,000 followers</span>
+                            <span className="text-gold-300 font-bold">~46,000 followers</span>
                             <span className="text-cream/60">Goal: 50,000</span>
                         </div>
                     </div>
